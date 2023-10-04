@@ -1,4 +1,4 @@
-local mType = Game.createMonsterType("Paladin Familiar")
+local mType = Game.createMonsterType("Paladin familiar")
 local monster = {}
 
 monster.description = "a paladin familiar"
@@ -76,8 +76,7 @@ monster.attacks = {
 monster.defenses = {
 	defense = 55,
 	armor = 55,
-	--	mitigation = ???,
-	{ name = "combat", interval = 2000, chance = 75, type = COMBAT_HEALING, minDamage = 450, maxDamage = 450, effect = CONST_ME_MAGIC_GREEN, target = false },
+	{ name = "combat", interval = 2000, chance = 75, type = COMBAT_HEALING, minDamage = 380, maxDamage = 380, effect = CONST_ME_MAGIC_GREEN, target = false },
 }
 
 monster.elements = {
@@ -95,7 +94,9 @@ monster.elements = {
 
 monster.immunities = {
 	{ type = "paralyze", condition = true },
+	{ type = "outfit", condition = false },
 	{ type = "invisible", condition = true },
+	{ type = "bleed", condition = false },
 }
 
 mType:register(monster)

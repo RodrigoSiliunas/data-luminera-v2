@@ -61,6 +61,7 @@ monster.flags = {
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
 	canWalkOnPoison = false,
+	pet = false,
 }
 
 monster.light = {
@@ -71,11 +72,11 @@ monster.light = {
 monster.voices = {
 	interval = 5000,
 	chance = 10,
-	{ text = "Flap! Flap!", yell = false },
+	{ text = "Flap!Flap!", yell = false },
 }
 
 monster.loot = {
-	{ name = "bat wing", chance = 1220 },
+	{ id = 5894, chance = 1220 }, -- bat wing
 }
 
 monster.attacks = {
@@ -84,14 +85,13 @@ monster.attacks = {
 
 monster.defenses = {
 	defense = 5,
-	armor = 1,
-	mitigation = 0.15,
+	armor = 5,
 }
 
 monster.elements = {
 	{ type = COMBAT_PHYSICALDAMAGE, percent = 0 },
 	{ type = COMBAT_ENERGYDAMAGE, percent = 0 },
-	{ type = COMBAT_EARTHDAMAGE, percent = -10 },
+	{ type = COMBAT_EARTHDAMAGE, percent = -20 },
 	{ type = COMBAT_FIREDAMAGE, percent = 0 },
 	{ type = COMBAT_LIFEDRAIN, percent = 0 },
 	{ type = COMBAT_MANADRAIN, percent = 0 },

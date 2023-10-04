@@ -1,3 +1,7 @@
+local condition = Condition(CONDITION_ATTRIBUTES)
+condition:setParameter(CONDITION_PARAM_TICKS, 16000)
+condition:setParameter(CONDITION_PARAM_BUFF_DAMAGERECEIVED, 105)
+
 function onTargetCreature(creature, target)
 	local player = creature:getPlayer()
 
@@ -7,16 +11,6 @@ function onTargetCreature(creature, target)
 	if target:getMaster() then
 		return true
 	end
-
-	local condition = Condition(CONDITION_ATTRIBUTES)
-	condition:setParameter(CONDITION_PARAM_TICKS, 16000)
-	condition:setParameter(CONDITION_PARAM_BUFF_DAMAGERECEIVED, 105)
-
-	local grade = 0
-	if creature and creature:getPlayer() then
-		grade = creature:upgradeSpellsWOD("Drain_Body_Spells")
-	end
-	condition:setParameter(CONDITION_PARAM_DRAIN_BODY, grade)
 
 	target:addCondition(condition)
 	return true

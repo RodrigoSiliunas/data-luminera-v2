@@ -5,10 +5,10 @@ monster.description = "an orchid frog"
 monster.experience = 20
 monster.outfit = {
 	lookType = 226,
-	lookHead = 71,
+	lookHead = 109,
 	lookBody = 14,
-	lookLegs = 71,
-	lookFeet = 70,
+	lookLegs = 109,
+	lookFeet = 114,
 	lookAddons = 0,
 	lookMount = 0,
 }
@@ -43,14 +43,14 @@ monster.strategiesTarget = {
 }
 
 monster.flags = {
-	summonable = false,
+	summonable = true,
 	attackable = true,
 	hostile = true,
 	convinceable = true,
-	pushable = false,
+	pushable = true,
 	rewardBoss = false,
 	illusionable = false,
-	canPushItems = true,
+	canPushItems = false,
 	canPushCreatures = false,
 	staticAttackChance = 90,
 	targetDistance = 1,
@@ -85,8 +85,7 @@ monster.attacks = {
 
 monster.defenses = {
 	defense = 5,
-	armor = 8,
-	mitigation = 0.28,
+	armor = 5,
 }
 
 monster.elements = {

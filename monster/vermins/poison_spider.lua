@@ -46,7 +46,7 @@ monster.flags = {
 	summonable = true,
 	attackable = true,
 	hostile = true,
-	convinceable = false,
+	convinceable = true,
 	pushable = true,
 	rewardBoss = false,
 	illusionable = true,
@@ -60,6 +60,7 @@ monster.flags = {
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
 	canWalkOnPoison = true,
+	pet = false,
 }
 
 monster.light = {
@@ -73,8 +74,8 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "gold coin", chance = 75000, maxCount = 4 },
-	{ name = "poison spider shell", chance = 1140 },
+	{ id = 3031, chance = 75000, maxCount = 4 }, -- gold coin
+	{ id = 11485, chance = 1140 }, -- poison spider shell
 }
 
 monster.attacks = {
@@ -83,8 +84,7 @@ monster.attacks = {
 
 monster.defenses = {
 	defense = 5,
-	armor = 2,
-	mitigation = 0.15,
+	armor = 5,
 }
 
 monster.elements = {

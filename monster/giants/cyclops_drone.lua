@@ -44,13 +44,13 @@ monster.strategiesTarget = {
 }
 
 monster.flags = {
-	summonable = false,
+	summonable = true,
 	attackable = true,
 	hostile = true,
 	convinceable = true,
 	pushable = false,
 	rewardBoss = false,
-	illusionable = true,
+	illusionable = false,
 	canPushItems = true,
 	canPushCreatures = true,
 	staticAttackChance = 95,
@@ -61,6 +61,7 @@ monster.flags = {
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
 	canWalkOnPoison = false,
+	pet = false,
 }
 
 monster.light = {
@@ -78,17 +79,17 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "gold coin", chance = 82000, maxCount = 30 },
+	{ id = 3031, chance = 82000, maxCount = 30 }, -- gold coin
 	{ id = 3093, chance = 90 }, -- club ring
-	{ name = "halberd", chance = 680 },
-	{ name = "short sword", chance = 8000 },
-	{ name = "dark helmet", chance = 190 },
-	{ name = "plate shield", chance = 2000 },
-	{ name = "battle shield", chance = 1600 },
-	{ name = "meat", chance = 50430, maxCount = 2 },
+	{ id = 3269, chance = 680 }, -- halberd
+	{ id = 3294, chance = 8000 }, -- short sword
+	{ id = 3384, chance = 190 }, -- dark helmet
+	{ id = 3410, chance = 2000 }, -- plate shield
+	{ id = 3413, chance = 1600 }, -- battle shield
+	{ id = 3577, chance = 50430, maxCount = 2 }, -- meat
 	{ id = 7398, chance = 120 }, -- cyclops trophy
-	{ name = "strong health potion", chance = 520 },
-	{ name = "cyclops toe", chance = 6750 },
+	{ id = 236, chance = 520 }, -- strong health potion
+	{ id = 9657, chance = 6750 }, -- cyclops toe
 }
 
 monster.attacks = {
@@ -98,8 +99,7 @@ monster.attacks = {
 
 monster.defenses = {
 	defense = 20,
-	armor = 25,
-	mitigation = 0.72,
+	armor = 20,
 }
 
 monster.elements = {
@@ -111,7 +111,7 @@ monster.elements = {
 	{ type = COMBAT_MANADRAIN, percent = 0 },
 	{ type = COMBAT_DROWNDAMAGE, percent = 0 },
 	{ type = COMBAT_ICEDAMAGE, percent = 20 },
-	{ type = COMBAT_HOLYDAMAGE, percent = 20 },
+	{ type = COMBAT_HOLYDAMAGE, percent = 1 },
 	{ type = COMBAT_DEATHDAMAGE, percent = -5 },
 }
 

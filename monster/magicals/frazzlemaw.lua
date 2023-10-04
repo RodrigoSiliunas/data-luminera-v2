@@ -63,6 +63,7 @@ monster.flags = {
 	canWalkOnEnergy = true,
 	canWalkOnFire = true,
 	canWalkOnPoison = true,
+	pet = false,
 }
 
 monster.light = {
@@ -73,42 +74,42 @@ monster.light = {
 monster.voices = {
 	interval = 5000,
 	chance = 10,
-	{ text = "Mwaaahgod! Overmwaaaaah! *gurgle*", yell = false },
 	{ text = "Mwaaaahnducate youuuuuu *gurgle*, mwaaah!", yell = false },
-	{ text = "MMMWAHMWAHMWAHMWAAAAH!", yell = true },
+	{ text = "Mwaaahgod! Overmwaaaaah! *gurgle*", yell = false },
+	{ text = "MMMWAHMWAHMWAHMWAAAAH!", yell = false },
 	{ text = "Mmmwhamwhamwhah, mwaaah!", yell = false },
 }
 
 monster.loot = {
-	{ name = "gold coin", chance = 100000, maxCount = 100 },
-	{ name = "platinum coin", chance = 100000, maxCount = 7 },
-	{ name = "banana skin", chance = 9500 },
-	{ name = "piece of iron", chance = 10400 },
-	{ name = "fishbone", chance = 10000 },
+	{ id = 3031, chance = 100000, maxCount = 100 }, -- gold coin
+	{ id = 3035, chance = 100000, maxCount = 7 }, -- platinum coin
+	{ id = 3104, chance = 9500 }, -- banana skin
+	{ id = 3110, chance = 10400 }, -- piece of iron
+	{ id = 3111, chance = 10000 }, -- fishbone
 	{ id = 3114, chance = 12680 }, -- skull
 	{ id = 3115, chance = 10000 }, -- bone
 	{ id = 3116, chance = 5500 }, -- big bone
-	{ name = "two handed sword", chance = 3200 },
+	{ id = 3265, chance = 3200 }, -- two handed sword
 	{ id = 3578, chance = 6750, maxCount = 3 }, -- fish
-	{ name = "ham", chance = 6000, maxCount = 2 },
-	{ name = "iron ore", chance = 3000 },
-	{ name = "fish fin", chance = 4700 },
-	{ name = "hardened bone", chance = 5000 },
+	{ id = 3582, chance = 6000, maxCount = 2 }, -- ham
+	{ id = 5880, chance = 3000 }, -- iron ore
+	{ id = 5895, chance = 4700 }, -- fish fin
+	{ id = 5925, chance = 5000 }, -- hardened bone
 	{ id = 5951, chance = 10800 }, -- fish tail
-	{ name = "assassin dagger", chance = 1000 },
-	{ name = "haunted blade", chance = 2240 },
-	{ name = "nightmare blade", chance = 1100 },
-	{ name = "great mana potion", chance = 15000, maxCount = 3 },
-	{ name = "great health potion", chance = 15000, maxCount = 2 },
-	{ name = "gold ingot", chance = 2300 },
-	{ name = "sai", chance = 1460 },
-	{ name = "violet crystal shard", chance = 3000 },
-	{ name = "brown crystal splinter", chance = 16000 },
-	{ name = "red crystal fragment", chance = 7600 },
+	{ id = 7404, chance = 1000 }, -- assassin dagger
+	{ id = 7407, chance = 2240 }, -- haunted blade
+	{ id = 7418, chance = 1100 }, -- nightmare blade
+	{ id = 238, chance = 15000, maxCount = 3 }, -- great mana potion
+	{ id = 239, chance = 15000, maxCount = 2 }, -- great health potion
+	{ id = 9058, chance = 2300 }, -- gold ingot
+	{ id = 10389, chance = 1460 }, -- sai
+	{ id = 16120, chance = 3000 }, -- violet crystal shard
+	{ id = 16123, chance = 16000 }, -- brown crystal splinter
+	{ id = 16126, chance = 7600 }, -- red crystal fragment
 	{ id = 16279, chance = 10000 }, -- crystal rubbish
-	{ name = "cluster of solace", chance = 4450 },
-	{ name = "frazzle tongue", chance = 18760 },
-	{ name = "frazzle skin", chance = 16000 },
+	{ id = 20062, chance = 450 }, -- cluster of solace
+	{ id = 20198, chance = 18760 }, -- frazzle tongue
+	{ id = 20199, chance = 16000 }, -- frazzle skin
 }
 
 monster.attacks = {
@@ -123,13 +124,12 @@ monster.attacks = {
 
 monster.defenses = {
 	defense = 30,
-	armor = 74,
-	mitigation = 2.31,
+	armor = 30,
 	{ name = "combat", interval = 2000, chance = 15, type = COMBAT_HEALING, minDamage = 250, maxDamage = 425, effect = CONST_ME_HITBYPOISON, target = false },
 }
 
 monster.elements = {
-	{ type = COMBAT_PHYSICALDAMAGE, percent = 5 },
+	{ type = COMBAT_PHYSICALDAMAGE, percent = 10 },
 	{ type = COMBAT_ENERGYDAMAGE, percent = 15 },
 	{ type = COMBAT_EARTHDAMAGE, percent = 20 },
 	{ type = COMBAT_FIREDAMAGE, percent = 10 },
@@ -137,8 +137,8 @@ monster.elements = {
 	{ type = COMBAT_MANADRAIN, percent = 0 },
 	{ type = COMBAT_DROWNDAMAGE, percent = 0 },
 	{ type = COMBAT_ICEDAMAGE, percent = 5 },
-	{ type = COMBAT_HOLYDAMAGE, percent = -5 },
-	{ type = COMBAT_DEATHDAMAGE, percent = 10 },
+	{ type = COMBAT_HOLYDAMAGE, percent = -10 },
+	{ type = COMBAT_DEATHDAMAGE, percent = 15 },
 }
 
 monster.immunities = {

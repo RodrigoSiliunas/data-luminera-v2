@@ -23,8 +23,9 @@ monster.Bestiary = {
 	CharmsPoints = 15,
 	Stars = 2,
 	Occurrence = 0,
-	Locations = "Plains of Havoc, Mount Sternum, Femor Hills, Cyclops Camp, Cyclopolis, Ancient Temple, Shadowthorn, \z
-	Orc Fort, Mistrock, Foreigner Quarter, Outlaw Camp and in the Cyclops version of the Forsaken Mine. ",
+	Locations = "Ab'Dendriel Underground, Cyclopolis, Femor Hills, Kazordoon Prison, Kazordoon Surroundings, \z
+		Maze of the Lost Souls, Mistrock, Mount Sternum, Outlaw Camp, Plains of Havoc, Shadowthorn, \z
+		Thais Northern Dungeon, Thais Surroundings, Thais Underground, Ulderek's Rock, Yalahar Foreigner Quarter.",
 }
 
 monster.health = 260
@@ -72,11 +73,11 @@ monster.light = {
 monster.voices = {
 	interval = 5000,
 	chance = 10,
+	{ text = "Il lorstok human!", yell = false },
+	{ text = "Toks utat.", yell = false },
 	{ text = "Human, uh whil dyh!", yell = false },
 	{ text = "Youh ah trak!", yell = false },
 	{ text = "Let da mashing begin!", yell = false },
-	{ text = "Toks utat.", yell = false },
-	{ text = "Il lorstok human!", yell = false },
 }
 
 monster.loot = {
@@ -101,8 +102,7 @@ monster.attacks = {
 
 monster.defenses = {
 	defense = 20,
-	armor = 17,
-	mitigation = 0.62,
+	armor = 20,
 }
 
 monster.elements = {

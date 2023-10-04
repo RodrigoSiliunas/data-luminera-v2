@@ -47,10 +47,10 @@ monster.flags = {
 	attackable = true,
 	hostile = true,
 	convinceable = true,
-	pushable = true,
+	pushable = false,
 	rewardBoss = false,
-	illusionable = true,
-	canPushItems = false,
+	illusionable = false,
+	canPushItems = true,
 	canPushCreatures = false,
 	staticAttackChance = 90,
 	targetDistance = 1,
@@ -60,6 +60,7 @@ monster.flags = {
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
 	canWalkOnPoison = false,
+	pet = false,
 }
 
 monster.light = {
@@ -74,8 +75,8 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "gold coin", chance = 33333, maxCount = 6 },
-	{ name = "sandcrawler shell", chance = 2173 },
+	{ id = 3031, chance = 33333, maxCount = 6 }, -- gold coin
+	{ id = 10456, chance = 2173 }, -- sandcrawler shell
 }
 
 monster.attacks = {
@@ -84,15 +85,14 @@ monster.attacks = {
 
 monster.defenses = {
 	defense = 10,
-	armor = 2,
-	mitigation = 0.07,
+	armor = 10,
 }
 
 monster.elements = {
 	{ type = COMBAT_PHYSICALDAMAGE, percent = 0 },
 	{ type = COMBAT_ENERGYDAMAGE, percent = 0 },
 	{ type = COMBAT_EARTHDAMAGE, percent = 0 },
-	{ type = COMBAT_FIREDAMAGE, percent = -10 },
+	{ type = COMBAT_FIREDAMAGE, percent = -5 },
 	{ type = COMBAT_LIFEDRAIN, percent = 0 },
 	{ type = COMBAT_MANADRAIN, percent = 0 },
 	{ type = COMBAT_DROWNDAMAGE, percent = 0 },

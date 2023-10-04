@@ -67,6 +67,7 @@ monster.flags = {
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
 	canWalkOnPoison = false,
+	pet = false,
 }
 
 monster.light = {
@@ -81,16 +82,16 @@ monster.voices = {
 
 monster.loot = {
 	{ id = 2920, chance = 5000 }, -- torch
-	{ name = "gold coin", chance = 68000, maxCount = 30 },
+	{ id = 3031, chance = 68000, maxCount = 30 }, -- gold coin
 	{ id = 3052, chance = 180 }, -- life ring
 	{ id = 3114, chance = 240 }, -- skull
-	{ name = "viking helmet", chance = 990 },
-	{ name = "scale armor", chance = 1000 },
-	{ name = "worm", chance = 9600, maxCount = 2 },
-	{ name = "brown piece of cloth", chance = 1000 },
-	{ name = "rotten piece of cloth", chance = 14470 },
-	{ name = "ghoul snack", chance = 5130 },
-	{ name = "pile of grave earth", chance = 950 },
+	{ id = 3367, chance = 990 }, -- viking helmet
+	{ id = 3377, chance = 1000 }, -- scale armor
+	{ id = 3492, chance = 9600, maxCount = 2 }, -- worm
+	{ id = 5913, chance = 1000 }, -- brown piece of cloth
+	{ id = 10291, chance = 14470 }, -- rotten piece of cloth
+	{ id = 11467, chance = 5130 }, -- ghoul snack
+	{ id = 11484, chance = 950 }, -- pile of grave earth
 	{ id = 23986, chance = 1000 }, -- heavy old tome
 }
 
@@ -101,8 +102,7 @@ monster.attacks = {
 
 monster.defenses = {
 	defense = 15,
-	armor = 8,
-	mitigation = 0.43,
+	armor = 15,
 	{ name = "combat", interval = 2000, chance = 5, type = COMBAT_HEALING, minDamage = 9, maxDamage = 15, effect = CONST_ME_MAGIC_BLUE, target = false },
 }
 

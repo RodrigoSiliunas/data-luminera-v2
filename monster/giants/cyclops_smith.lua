@@ -45,13 +45,13 @@ monster.strategiesTarget = {
 }
 
 monster.flags = {
-	summonable = false,
+	summonable = true,
 	attackable = true,
 	hostile = true,
 	convinceable = true,
 	pushable = false,
 	rewardBoss = false,
-	illusionable = true,
+	illusionable = false,
 	canPushItems = true,
 	canPushCreatures = true,
 	staticAttackChance = 95,
@@ -62,6 +62,7 @@ monster.flags = {
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
 	canWalkOnPoison = false,
+	pet = false,
 }
 
 monster.light = {
@@ -78,20 +79,20 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "gold coin", chance = 82920, maxCount = 70 },
+	{ id = 3031, chance = 82920, maxCount = 70 }, -- gold coin
 	{ id = 3093, chance = 90 }, -- club ring
-	{ name = "battle axe", chance = 5450 },
-	{ name = "double axe", chance = 880 },
-	{ name = "battle hammer", chance = 5200 },
-	{ name = "heavy machete", chance = 2000 },
-	{ name = "dark helmet", chance = 200 },
-	{ name = "plate shield", chance = 2000 },
-	{ name = "battle shield", chance = 6190 },
-	{ name = "meat", chance = 49950 },
+	{ id = 3266, chance = 5450 }, -- battle axe
+	{ id = 3275, chance = 880 }, -- double axe
+	{ id = 3305, chance = 5200 }, -- battle hammer
+	{ id = 3330, chance = 2000 }, -- heavy machete
+	{ id = 3384, chance = 200 }, -- dark helmet
+	{ id = 3410, chance = 2000 }, -- plate shield
+	{ id = 3413, chance = 6190 }, -- battle shield
+	{ id = 3577, chance = 49950 }, -- meat
 	{ id = 7398, chance = 140 }, -- cyclops trophy
-	{ name = "spiked squelcher", chance = 150 },
-	{ name = "strong health potion", chance = 390 },
-	{ name = "cyclops toe", chance = 10280 },
+	{ id = 7452, chance = 150 }, -- spiked squelcher
+	{ id = 236, chance = 390 }, -- strong health potion
+	{ id = 9657, chance = 10280 }, -- cyclops toe
 }
 
 monster.attacks = {
@@ -102,8 +103,7 @@ monster.attacks = {
 
 monster.defenses = {
 	defense = 25,
-	armor = 28,
-	mitigation = 0.96,
+	armor = 25,
 }
 
 monster.elements = {
@@ -115,7 +115,7 @@ monster.elements = {
 	{ type = COMBAT_MANADRAIN, percent = 0 },
 	{ type = COMBAT_DROWNDAMAGE, percent = 0 },
 	{ type = COMBAT_ICEDAMAGE, percent = 0 },
-	{ type = COMBAT_HOLYDAMAGE, percent = 20 },
+	{ type = COMBAT_HOLYDAMAGE, percent = 1 },
 	{ type = COMBAT_DEATHDAMAGE, percent = -5 },
 }
 

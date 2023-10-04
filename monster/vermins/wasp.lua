@@ -25,7 +25,7 @@ monster.Bestiary = {
 	Occurrence = 0,
 	Locations = "South of Thais, west of Ab'Dendriel, northeastern Cormaya, \z
 		Green Claw Swamp between Kazordoon and Venore, Wasp Tower in Rookgaard, \z
-		Wasp Towers in Darashia, all over Tiquanda, and all over Vandura, roaming around Marapur.",
+		Wasp Towers in Darashia, all over Tiquanda, and all over Vandura.",
 }
 
 monster.health = 35
@@ -49,7 +49,7 @@ monster.flags = {
 	summonable = true,
 	attackable = true,
 	hostile = true,
-	convinceable = false,
+	convinceable = true,
 	pushable = true,
 	rewardBoss = false,
 	illusionable = true,
@@ -63,6 +63,7 @@ monster.flags = {
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
 	canWalkOnPoison = true,
+	pet = false,
 }
 
 monster.light = {
@@ -77,7 +78,7 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "honeycomb", chance = 3000 },
+	{ id = 5902, chance = 3000 }, -- honeycomb
 }
 
 monster.attacks = {
@@ -86,8 +87,7 @@ monster.attacks = {
 
 monster.defenses = {
 	defense = 10,
-	armor = 4,
-	mitigation = 0.20,
+	armor = 10,
 }
 
 monster.elements = {

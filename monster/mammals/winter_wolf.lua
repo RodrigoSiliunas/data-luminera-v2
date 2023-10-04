@@ -47,10 +47,10 @@ monster.flags = {
 	attackable = true,
 	hostile = true,
 	convinceable = true,
-	pushable = false,
+	pushable = true,
 	rewardBoss = false,
 	illusionable = true,
-	canPushItems = true,
+	canPushItems = false,
 	canPushCreatures = false,
 	staticAttackChance = 90,
 	targetDistance = 1,
@@ -60,6 +60,7 @@ monster.flags = {
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
 	canWalkOnPoison = false,
+	pet = false,
 }
 
 monster.light = {
@@ -74,8 +75,8 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "meat", chance = 30000, maxCount = 2 },
-	{ name = "winter wolf fur", chance = 10000 },
+	{ id = 3577, chance = 30000, maxCount = 2 }, -- meat
+	{ id = 10295, chance = 10000 }, -- winter wolf fur
 }
 
 monster.attacks = {
@@ -84,8 +85,7 @@ monster.attacks = {
 
 monster.defenses = {
 	defense = 5,
-	armor = 2,
-	mitigation = 0.15,
+	armor = 5,
 }
 
 monster.elements = {
@@ -97,8 +97,8 @@ monster.elements = {
 	{ type = COMBAT_MANADRAIN, percent = 0 },
 	{ type = COMBAT_DROWNDAMAGE, percent = 0 },
 	{ type = COMBAT_ICEDAMAGE, percent = 20 },
-	{ type = COMBAT_HOLYDAMAGE, percent = 10 },
-	{ type = COMBAT_DEATHDAMAGE, percent = -10 },
+	{ type = COMBAT_HOLYDAMAGE, percent = 5 },
+	{ type = COMBAT_DEATHDAMAGE, percent = -5 },
 }
 
 monster.immunities = {

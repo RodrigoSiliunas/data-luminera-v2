@@ -62,6 +62,7 @@ monster.flags = {
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
 	canWalkOnPoison = false,
+	pet = false,
 }
 
 monster.light = {
@@ -75,10 +76,10 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "gold coin", chance = 50000, maxCount = 10 },
-	{ name = "ham", chance = 40000 },
-	{ name = "crocodile boots", chance = 100 },
-	{ name = "piece of crocodile leather", chance = 20180 },
+	{ id = 3031, chance = 50000, maxCount = 10 }, -- gold coin
+	{ id = 3582, chance = 40000 }, -- ham
+	{ id = 3556, chance = 100 }, -- crocodile boots
+	{ id = 10279, chance = 20180 }, -- piece of crocodile leather
 }
 
 monster.attacks = {
@@ -87,12 +88,11 @@ monster.attacks = {
 
 monster.defenses = {
 	defense = 15,
-	armor = 13,
-	mitigation = 0.13,
+	armor = 15,
 }
 
 monster.elements = {
-	{ type = COMBAT_PHYSICALDAMAGE, percent = -10 },
+	{ type = COMBAT_PHYSICALDAMAGE, percent = -5 },
 	{ type = COMBAT_ENERGYDAMAGE, percent = -5 },
 	{ type = COMBAT_EARTHDAMAGE, percent = 20 },
 	{ type = COMBAT_FIREDAMAGE, percent = -10 },

@@ -47,10 +47,10 @@ monster.flags = {
 	attackable = true,
 	hostile = true,
 	convinceable = false,
-	pushable = true,
+	pushable = false,
 	rewardBoss = false,
 	illusionable = false,
-	canPushItems = false,
+	canPushItems = true,
 	canPushCreatures = true,
 	staticAttackChance = 90,
 	targetDistance = 1,
@@ -91,8 +91,7 @@ monster.attacks = {
 
 monster.defenses = {
 	defense = 5,
-	armor = 3,
-	mitigation = 0.13,
+	armor = 5,
 	{ name = "combat", interval = 6000, chance = 20, type = COMBAT_HEALING, minDamage = 0, maxDamage = 4, effect = CONST_ME_MAGIC_BLUE, target = false },
 }
 

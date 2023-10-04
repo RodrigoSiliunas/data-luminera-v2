@@ -61,6 +61,7 @@ monster.flags = {
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
 	canWalkOnPoison = false,
+	pet = false,
 }
 
 monster.light = {
@@ -74,8 +75,8 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "gold coin", chance = 65150, maxCount = 5 },
-	{ name = "spider fangs", chance = 960 },
+	{ id = 3031, chance = 65150, maxCount = 5 }, -- gold coin
+	{ id = 8031, chance = 960 }, -- spider fangs
 }
 
 monster.attacks = {
@@ -85,7 +86,6 @@ monster.attacks = {
 monster.defenses = {
 	defense = 2,
 	armor = 2,
-	mitigation = 0.05,
 }
 
 monster.elements = {
