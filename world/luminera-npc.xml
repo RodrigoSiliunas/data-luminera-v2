@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<npcs>
+	<npc centerx="915" centery="602" centerz="4" radius="1">
+		<npc name="Undal" x="0" y="0" z="4" spawntime="60" />
+	</npc>
+	<npc centerx="676" centery="887" centerz="7" radius="1">
+		<npc name="Taegen" x="0" y="0" z="7" spawntime="60" />
+	</npc>
+	<npc centerx="669" centery="896" centerz="7" radius="1">
+		<npc name="Maelyrra" x="0" y="0" z="7" spawntime="60" />
+	</npc>
+	<npc centerx="714" centery="898" centerz="7" radius="1">
+		<npc name="Peaceful Pooka" x="0" y="0" z="7" spawntime="60" />
+	</npc>
+	<npc centerx="634" centery="906" centerz="7" radius="1">
+		<npc name="Gerimor" x="0" y="0" z="7" spawntime="60" />
+	</npc>
+	<npc centerx="606" centery="922" centerz="7" radius="1">
+		<npc name="Aurita" x="0" y="0" z="7" spawntime="60" />
+	</npc>
+	<npc centerx="640" centery="956" centerz="7" radius="1">
+		<npc name="Dancing Fairy" x="0" y="0" z="7" spawntime="60" />
+	</npc>
+</npcs>

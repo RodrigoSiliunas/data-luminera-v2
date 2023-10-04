@@ -1,0 +1,14 @@
+# Pastas que não pertencem ao data-canary;
+
+/src
+/data
+/data-otservbr-global
+/.vscode
+/world/canary
+
+# Arquivos que não pertencem ao data-canary.
+config.lua.dist
+
+/world/bkp-luminera
+
+**.vscode
