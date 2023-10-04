@@ -1,10 +1,10 @@
-local mType = Game.createMonsterType("Frost Troll")
+local mType = Game.createMonsterType("Troll Guard")
 local monster = {}
 
-monster.description = "a frost troll"
-monster.experience = 23
+monster.description = "a troll guard"
+monster.experience = 25
 monster.outfit = {
-	lookType = 53,
+	lookType = 281,
 	lookHead = 0,
 	lookBody = 0,
 	lookLegs = 0,
@@ -13,29 +13,29 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 53
+monster.raceId = 745
 monster.Bestiary = {
 	class = "Humanoid",
 	race = BESTY_RACE_HUMANOID,
-	toKill = 250,
-	FirstUnlock = 10,
-	SecondUnlock = 100,
-	CharmsPoints = 5,
-	Stars = 1,
-	Occurrence = 0,
-	Locations = "Ice Islands, Svargrond and Edron.",
+	toKill = 500,
+	FirstUnlock = 25,
+	SecondUnlock = 250,
+	CharmsPoints = 15,
+	Stars = 2,
+	Occurrence = 3,
+	Locations = "Rookgaards central cave in the Mapper Coords125.64125.136104textnew western Troll tunnel, north-west of Carlin during raids and Thais Knights Guild arena during raids on Kingsday Mini World ChangeKingsday.",
 }
 
-monster.health = 55
-monster.maxHealth = 55
+monster.health = 60
+monster.maxHealth = 60
 monster.race = "blood"
-monster.corpse = 5998
-monster.speed = 70
-monster.manaCost = 300
+monster.corpse = 861
+monster.speed = 63
+monster.manaCost = 0
 
 monster.changeTarget = {
-	interval = 4000,
-	chance = 0,
+	interval = 5000,
+	chance = 20,
 }
 
 monster.strategiesTarget = {
@@ -43,18 +43,18 @@ monster.strategiesTarget = {
 }
 
 monster.flags = {
-	summonable = true,
+	summonable = false,
 	attackable = true,
 	hostile = true,
-	convinceable = true,
+	convinceable = false,
 	pushable = true,
 	rewardBoss = false,
-	illusionable = true,
+	illusionable = false,
 	canPushItems = false,
 	canPushCreatures = false,
 	staticAttackChance = 90,
 	targetDistance = 1,
-	runHealth = 10,
+	runHealth = 17,
 	healthHidden = false,
 	isBlockable = false,
 	canWalkOnEnergy = false,
@@ -70,36 +70,30 @@ monster.light = {
 monster.voices = {
 	interval = 5000,
 	chance = 10,
-	{ text = "Brrr", yell = false },
-	{ text = "Broar!", yell = false },
 }
 
 monster.loot = {
-	{ name = "gold coin", chance = 50840, maxCount = 12 },
-	{ id = 3130, chance = 8300 }, -- twigs
-	{ name = "rapier", chance = 15500 },
-	{ name = "spear", chance = 21500 },
-	{ id = 3412, chance = 15850 }, -- wooden shield
-	{ name = "coat", chance = 1200 },
-	{ id = 3578, chance = 18000 }, -- fish
-	{ name = "frosty ear of a troll", chance = 2000 },
+	{ id = 3003, chance = 10000 }, -- rope
+	{ name = "gold coin", chance = 58000, maxCount = 12 },
+	{ name = "studded club", chance = 3000 },
+	{ name = "meat", chance = 14000, maxCount = 2 },
 }
 
 monster.attacks = {
-	{ name = "melee", interval = 2000, chance = 100, minDamage = 0, maxDamage = -20 },
+	{ name = "melee", interval = 2000, chance = 100, minDamage = 0, maxDamage = -9 },
 }
 
 monster.defenses = {
-	defense = 15,
-	armor = 6,
-	mitigation = 0.23,
+	defense = 2,
+	armor = 4,
+	mitigation = 0.15,
 }
 
 monster.elements = {
 	{ type = COMBAT_PHYSICALDAMAGE, percent = 0 },
-	{ type = COMBAT_ENERGYDAMAGE, percent = -15 },
+	{ type = COMBAT_ENERGYDAMAGE, percent = 20 },
 	{ type = COMBAT_EARTHDAMAGE, percent = -10 },
-	{ type = COMBAT_FIREDAMAGE, percent = 40 },
+	{ type = COMBAT_FIREDAMAGE, percent = 0 },
 	{ type = COMBAT_LIFEDRAIN, percent = 0 },
 	{ type = COMBAT_MANADRAIN, percent = 0 },
 	{ type = COMBAT_DROWNDAMAGE, percent = 0 },

@@ -1,10 +1,10 @@
-local mType = Game.createMonsterType("Island Troll")
+local mType = Game.createMonsterType("Dwarf")
 local monster = {}
 
-monster.description = "an island troll"
-monster.experience = 20
+monster.description = "a dwarf"
+monster.experience = 45
 monster.outfit = {
-	lookType = 282,
+	lookType = 69,
 	lookHead = 0,
 	lookBody = 0,
 	lookLegs = 0,
@@ -13,28 +13,29 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 277
+monster.raceId = 69
 monster.Bestiary = {
 	class = "Humanoid",
 	race = BESTY_RACE_HUMANOID,
-	toKill = 250,
-	FirstUnlock = 10,
-	SecondUnlock = 100,
-	CharmsPoints = 5,
-	Stars = 1,
+	toKill = 500,
+	FirstUnlock = 25,
+	SecondUnlock = 250,
+	CharmsPoints = 15,
+	Stars = 2,
 	Occurrence = 0,
-	Locations = "Goroma.",
+	Locations = "Kazordoon Dwarf Mines, Dwarf Bridge, deep Elvenbane, Tiquanda Dwarf Cave, Cormaya Dwarf Cave, \z
+		Island of Destiny (Knights area), Beregar.",
 }
 
-monster.health = 50
-monster.maxHealth = 50
+monster.health = 90
+monster.maxHealth = 90
 monster.race = "blood"
-monster.corpse = 865
-monster.speed = 63
-monster.manaCost = 290
+monster.corpse = 6007
+monster.speed = 85
+monster.manaCost = 320
 
 monster.changeTarget = {
-	interval = 5000,
+	interval = 4000,
 	chance = 0,
 }
 
@@ -54,7 +55,7 @@ monster.flags = {
 	canPushCreatures = false,
 	staticAttackChance = 90,
 	targetDistance = 1,
-	runHealth = 15,
+	runHealth = 0,
 	healthHidden = false,
 	isBlockable = false,
 	canWalkOnEnergy = false,
@@ -70,49 +71,44 @@ monster.light = {
 monster.voices = {
 	interval = 5000,
 	chance = 10,
-	{ text = "Hmmm, turtles", yell = false },
-	{ text = "Hmmm, dogs", yell = false },
-	{ text = "Hmmm, worms", yell = false },
-	{ text = "Groar", yell = false },
-	{ text = "Gruntz!", yell = false },
+	{ text = "Hail Durin!", yell = false },
 }
 
 monster.loot = {
-	{ id = 3003, chance = 8000 }, -- rope
-	{ name = "gold coin", chance = 60000, maxCount = 10 },
-	{ name = "silver amulet", chance = 70 },
-	{ name = "hand axe", chance = 18000 },
-	{ name = "spear", chance = 20000 },
-	{ name = "studded club", chance = 5000 },
-	{ name = "leather helmet", chance = 10000 },
-	{ id = 3412, chance = 16000 }, -- wooden shield
-	{ name = "leather boots", chance = 10500 },
-	{ name = "mango", chance = 5000 },
-	{ id = 5901, chance = 30000 }, -- wood
-	{ name = "marlin", chance = 40 },
+	{ name = "gold coin", chance = 35000, maxCount = 8 },
+	{ id = 3097, chance = 100 }, -- dwarven ring
+	{ name = "axe", chance = 15000 },
+	{ name = "hatchet", chance = 25000 },
+	{ name = "studded armor", chance = 8000 },
+	{ name = "copper shield", chance = 10000 },
+	{ id = 3456, chance = 10000 }, -- pick
+	{ id = 3505, chance = 8000 }, -- letter
+	{ name = "leather legs", chance = 10000 },
+	{ name = "white mushroom", chance = 50000 },
+	{ name = "iron ore", chance = 700 },
 }
 
 monster.attacks = {
-	{ name = "melee", interval = 2000, chance = 100, minDamage = 0, maxDamage = -10 },
+	{ name = "melee", interval = 2000, chance = 100, minDamage = 0, maxDamage = -30 },
 }
 
 monster.defenses = {
 	defense = 10,
-	armor = 6,
-	mitigation = 0.20,
+	armor = 8,
+	mitigation = 0.36,
 }
 
 monster.elements = {
 	{ type = COMBAT_PHYSICALDAMAGE, percent = 0 },
 	{ type = COMBAT_ENERGYDAMAGE, percent = 0 },
-	{ type = COMBAT_EARTHDAMAGE, percent = 0 },
-	{ type = COMBAT_FIREDAMAGE, percent = 0 },
+	{ type = COMBAT_EARTHDAMAGE, percent = 10 },
+	{ type = COMBAT_FIREDAMAGE, percent = -5 },
 	{ type = COMBAT_LIFEDRAIN, percent = 0 },
 	{ type = COMBAT_MANADRAIN, percent = 0 },
 	{ type = COMBAT_DROWNDAMAGE, percent = 0 },
 	{ type = COMBAT_ICEDAMAGE, percent = 0 },
 	{ type = COMBAT_HOLYDAMAGE, percent = 0 },
-	{ type = COMBAT_DEATHDAMAGE, percent = 0 },
+	{ type = COMBAT_DEATHDAMAGE, percent = -5 },
 }
 
 monster.immunities = {

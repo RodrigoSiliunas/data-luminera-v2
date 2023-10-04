@@ -1,10 +1,10 @@
-local mType = Game.createMonsterType("Troll")
+local mType = Game.createMonsterType("Troll Champion")
 local monster = {}
 
-monster.description = "a troll"
-monster.experience = 20
+monster.description = "a troll champion"
+monster.experience = 40
 monster.outfit = {
-	lookType = 15,
+	lookType = 281,
 	lookHead = 0,
 	lookBody = 0,
 	lookLegs = 0,
@@ -13,26 +13,26 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 15
+monster.raceId = 392
 monster.Bestiary = {
 	class = "Humanoid",
 	race = BESTY_RACE_HUMANOID,
-	toKill = 250,
-	FirstUnlock = 10,
-	SecondUnlock = 100,
-	CharmsPoints = 5,
-	Stars = 1,
+	toKill = 500,
+	FirstUnlock = 25,
+	SecondUnlock = 250,
+	CharmsPoints = 15,
+	Stars = 2,
 	Occurrence = 0,
-	Locations = "In many dungeons around Tibia like the troll cave in Thais, south of Carlin (out the east \z
-		exit and down the hole), Island of Destiny, Edron Troll Cave, and in Ab'Dendriel. Also found in Rookgaard.",
+	Locations = "Edron Troll-Goblin Peninsula, Ab'dendriel Shadow Caves, Thais South-East Troll Caves, \z
+		Dusalk's Troll Clan Cave, Island of Destiny in Paladin's guild.",
 }
 
-monster.health = 50
-monster.maxHealth = 50
+monster.health = 75
+monster.maxHealth = 75
 monster.race = "blood"
-monster.corpse = 5960
-monster.speed = 63
-monster.manaCost = 290
+monster.corpse = 861
+monster.speed = 69
+monster.manaCost = 350
 
 monster.changeTarget = {
 	interval = 4000,
@@ -53,7 +53,7 @@ monster.flags = {
 	illusionable = true,
 	canPushItems = false,
 	canPushCreatures = false,
-	staticAttackChance = 90,
+	staticAttackChance = 95,
 	targetDistance = 1,
 	runHealth = 15,
 	healthHidden = false,
@@ -71,36 +71,33 @@ monster.light = {
 monster.voices = {
 	interval = 5000,
 	chance = 10,
-	{ text = "Hmmm, bugs", yell = false },
-	{ text = "Hmmm, dogs", yell = false },
-	{ text = "Grrr", yell = false },
-	{ text = "Groar", yell = false },
+	{ text = "Meee maity!", yell = false },
+	{ text = "Grrrr", yell = false },
+	{ text = "Whaaaz up!?", yell = false },
 	{ text = "Gruntz!", yell = false },
+	{ text = "Groar", yell = false },
 }
 
 monster.loot = {
-	{ id = 3003, chance = 7950 }, -- rope
-	{ name = "gold coin", chance = 65300, maxCount = 12 },
-	{ name = "silver amulet", chance = 80 },
-	{ name = "hand axe", chance = 18000 },
-	{ name = "spear", chance = 13000 },
-	{ name = "studded club", chance = 5000 },
-	{ name = "leather helmet", chance = 12000 },
-	{ id = 3412, chance = 4730 }, -- wooden shield
-	{ name = "leather boots", chance = 10000 },
-	{ name = "meat", chance = 15000 },
-	{ name = "bunch of troll hair", chance = 1000 },
-	{ id = 23986, chance = 1000 }, -- heavy old tome
+	{ name = "gold coin", chance = 64000, maxCount = 12 },
+	{ name = "silver amulet", chance = 230 },
+	{ name = "spear", chance = 25000 },
+	{ name = "studded club", chance = 5450 },
+	{ id = 3412, chance = 6000 }, -- wooden shield
+	{ name = "arrow", chance = 5450, maxCount = 5 },
+	{ name = "leather boots", chance = 9000 },
+	{ name = "meat", chance = 9650 },
+	{ name = "bunch of troll hair", chance = 3000 },
+	{ name = "trollroot", chance = 750 },
 }
-
 monster.attacks = {
-	{ name = "melee", interval = 2000, chance = 100, minDamage = 0, maxDamage = -15 },
+	{ name = "melee", interval = 2000, chance = 100, minDamage = 0, maxDamage = -35 },
 }
 
 monster.defenses = {
-	defense = 10,
-	armor = 6,
-	mitigation = 0.20,
+	defense = 20,
+	armor = 10,
+	mitigation = 0.28,
 }
 
 monster.elements = {

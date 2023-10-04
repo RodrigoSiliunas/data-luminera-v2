@@ -1,10 +1,10 @@
-local mType = Game.createMonsterType("Troll")
+local mType = Game.createMonsterType("Orc")
 local monster = {}
 
-monster.description = "a troll"
-monster.experience = 20
+monster.description = "an orc"
+monster.experience = 25
 monster.outfit = {
-	lookType = 15,
+	lookType = 5,
 	lookHead = 0,
 	lookBody = 0,
 	lookLegs = 0,
@@ -13,26 +13,26 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 15
+monster.raceId = 5
 monster.Bestiary = {
 	class = "Humanoid",
 	race = BESTY_RACE_HUMANOID,
-	toKill = 250,
-	FirstUnlock = 10,
-	SecondUnlock = 100,
-	CharmsPoints = 5,
-	Stars = 1,
+	toKill = 500,
+	FirstUnlock = 25,
+	SecondUnlock = 250,
+	CharmsPoints = 15,
+	Stars = 2,
 	Occurrence = 0,
-	Locations = "In many dungeons around Tibia like the troll cave in Thais, south of Carlin (out the east \z
-		exit and down the hole), Island of Destiny, Edron Troll Cave, and in Ab'Dendriel. Also found in Rookgaard.",
+	Locations = "Ulderek's Rock, Edron Orc Cave, Ancient Temple, Ice Islands, Venore Orc Cave, \z
+		Rookgaard Orc Fortress, Rookgaard main cave, Fibula Dungeon, Elvenbane, Foreigner Quarter, Zao Orc Land.",
 }
 
-monster.health = 50
-monster.maxHealth = 50
+monster.health = 70
+monster.maxHealth = 70
 monster.race = "blood"
-monster.corpse = 5960
-monster.speed = 63
-monster.manaCost = 290
+monster.corpse = 5966
+monster.speed = 75
+monster.manaCost = 300
 
 monster.changeTarget = {
 	interval = 4000,
@@ -71,35 +71,31 @@ monster.light = {
 monster.voices = {
 	interval = 5000,
 	chance = 10,
-	{ text = "Hmmm, bugs", yell = false },
-	{ text = "Hmmm, dogs", yell = false },
-	{ text = "Grrr", yell = false },
-	{ text = "Groar", yell = false },
-	{ text = "Gruntz!", yell = false },
+	{ text = "Grow truk grrrrr.", yell = false },
+	{ text = "Prek tars, dekklep zurk.", yell = false },
+	{ text = "Grak brrretz!", yell = false },
 }
 
 monster.loot = {
-	{ id = 3003, chance = 7950 }, -- rope
-	{ name = "gold coin", chance = 65300, maxCount = 12 },
-	{ name = "silver amulet", chance = 80 },
-	{ name = "hand axe", chance = 18000 },
-	{ name = "spear", chance = 13000 },
-	{ name = "studded club", chance = 5000 },
-	{ name = "leather helmet", chance = 12000 },
-	{ id = 3412, chance = 4730 }, -- wooden shield
-	{ name = "leather boots", chance = 10000 },
-	{ name = "meat", chance = 15000 },
-	{ name = "bunch of troll hair", chance = 1000 },
+	{ name = "gold coin", chance = 84810, maxCount = 14 },
+	{ name = "sabre", chance = 5850 },
+	{ name = "axe", chance = 4960 },
+	{ name = "studded helmet", chance = 2950 },
+	{ name = "studded armor", chance = 7860 },
+	{ name = "studded shield", chance = 7300 },
+	{ name = "meat", chance = 10160 },
+	{ name = "orc tooth", chance = 210 },
+	{ name = "orc leather", chance = 590 },
 	{ id = 23986, chance = 1000 }, -- heavy old tome
 }
 
 monster.attacks = {
-	{ name = "melee", interval = 2000, chance = 100, minDamage = 0, maxDamage = -15 },
+	{ name = "melee", interval = 2000, chance = 100, minDamage = 0, maxDamage = -35 },
 }
 
 monster.defenses = {
 	defense = 10,
-	armor = 6,
+	armor = 4,
 	mitigation = 0.20,
 }
 

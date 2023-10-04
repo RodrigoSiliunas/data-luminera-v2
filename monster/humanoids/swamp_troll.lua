@@ -1,10 +1,10 @@
-local mType = Game.createMonsterType("Island Troll")
+local mType = Game.createMonsterType("Swamp Troll")
 local monster = {}
 
-monster.description = "an island troll"
-monster.experience = 20
+monster.description = "a swamp troll"
+monster.experience = 25
 monster.outfit = {
-	lookType = 282,
+	lookType = 76,
 	lookHead = 0,
 	lookBody = 0,
 	lookLegs = 0,
@@ -13,25 +13,26 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 277
+monster.raceId = 76
 monster.Bestiary = {
 	class = "Humanoid",
 	race = BESTY_RACE_HUMANOID,
-	toKill = 250,
-	FirstUnlock = 10,
-	SecondUnlock = 100,
-	CharmsPoints = 5,
-	Stars = 1,
+	toKill = 500,
+	FirstUnlock = 25,
+	SecondUnlock = 250,
+	CharmsPoints = 15,
+	Stars = 2,
 	Occurrence = 0,
-	Locations = "Goroma.",
+	Locations = "Port Hope Swamp Trolls, Venore Swamp Troll Cave, all around north area of Port Hope, \z
+		small spawn north-west of Venore and in cave south-east of Thais, also one in Foreigner Quarter.",
 }
 
-monster.health = 50
-monster.maxHealth = 50
-monster.race = "blood"
-monster.corpse = 865
-monster.speed = 63
-monster.manaCost = 290
+monster.health = 55
+monster.maxHealth = 55
+monster.race = "venom"
+monster.corpse = 6018
+monster.speed = 64
+monster.manaCost = 320
 
 monster.changeTarget = {
 	interval = 5000,
@@ -46,7 +47,7 @@ monster.flags = {
 	summonable = true,
 	attackable = true,
 	hostile = true,
-	convinceable = true,
+	convinceable = false,
 	pushable = true,
 	rewardBoss = false,
 	illusionable = true,
@@ -70,43 +71,40 @@ monster.light = {
 monster.voices = {
 	interval = 5000,
 	chance = 10,
-	{ text = "Hmmm, turtles", yell = false },
-	{ text = "Hmmm, dogs", yell = false },
-	{ text = "Hmmm, worms", yell = false },
-	{ text = "Groar", yell = false },
-	{ text = "Gruntz!", yell = false },
+	{ text = "Me strong! Me ate spinach!", yell = false },
+	{ text = "Groar!", yell = false },
+	{ text = "Grrrr", yell = false },
 }
 
 monster.loot = {
-	{ id = 3003, chance = 8000 }, -- rope
-	{ name = "gold coin", chance = 60000, maxCount = 10 },
-	{ name = "silver amulet", chance = 70 },
-	{ name = "hand axe", chance = 18000 },
-	{ name = "spear", chance = 20000 },
-	{ name = "studded club", chance = 5000 },
-	{ name = "leather helmet", chance = 10000 },
-	{ id = 3412, chance = 16000 }, -- wooden shield
-	{ name = "leather boots", chance = 10500 },
-	{ name = "mango", chance = 5000 },
-	{ id = 5901, chance = 30000 }, -- wood
-	{ name = "marlin", chance = 40 },
+	{ id = 2920, chance = 15000 }, -- torch
+	{ name = "gold coin", chance = 50300, maxCount = 5 },
+	{ name = "mouldy cheese", chance = 10000 },
+	{ name = "spear", chance = 13000 },
+	{ name = "fishing rod", chance = 60 },
+	{ name = "leather boots", chance = 9500 },
+	{ id = 3578, chance = 60000 }, -- fish
+	{ name = "troll green", chance = 1200 },
+	{ id = 5901, chance = 2140 }, -- wood
+	{ name = "swamp grass", chance = 3100 },
+	{ name = "medicine pouch", chance = 2160 },
 }
 
 monster.attacks = {
-	{ name = "melee", interval = 2000, chance = 100, minDamage = 0, maxDamage = -10 },
+	{ name = "melee", interval = 2000, chance = 100, minDamage = 0, maxDamage = -13, condition = { type = CONDITION_POISON, totalDamage = 1, interval = 4000 } },
 }
 
 monster.defenses = {
-	defense = 10,
+	defense = 15,
 	armor = 6,
-	mitigation = 0.20,
+	mitigation = 0.25,
 }
 
 monster.elements = {
 	{ type = COMBAT_PHYSICALDAMAGE, percent = 0 },
 	{ type = COMBAT_ENERGYDAMAGE, percent = 0 },
-	{ type = COMBAT_EARTHDAMAGE, percent = 0 },
-	{ type = COMBAT_FIREDAMAGE, percent = 0 },
+	{ type = COMBAT_EARTHDAMAGE, percent = 15 },
+	{ type = COMBAT_FIREDAMAGE, percent = -5 },
 	{ type = COMBAT_LIFEDRAIN, percent = 0 },
 	{ type = COMBAT_MANADRAIN, percent = 0 },
 	{ type = COMBAT_DROWNDAMAGE, percent = 0 },

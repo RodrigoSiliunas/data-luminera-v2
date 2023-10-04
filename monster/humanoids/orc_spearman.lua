@@ -1,10 +1,10 @@
-local mType = Game.createMonsterType("Troll")
+local mType = Game.createMonsterType("Orc Spearman")
 local monster = {}
 
-monster.description = "a troll"
-monster.experience = 20
+monster.description = "an orc spearman"
+monster.experience = 38
 monster.outfit = {
-	lookType = 15,
+	lookType = 50,
 	lookHead = 0,
 	lookBody = 0,
 	lookLegs = 0,
@@ -13,30 +13,32 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 15
+monster.raceId = 50
 monster.Bestiary = {
 	class = "Humanoid",
 	race = BESTY_RACE_HUMANOID,
-	toKill = 250,
-	FirstUnlock = 10,
-	SecondUnlock = 100,
-	CharmsPoints = 5,
-	Stars = 1,
+	toKill = 500,
+	FirstUnlock = 25,
+	SecondUnlock = 250,
+	CharmsPoints = 15,
+	Stars = 2,
 	Occurrence = 0,
-	Locations = "In many dungeons around Tibia like the troll cave in Thais, south of Carlin (out the east \z
-		exit and down the hole), Island of Destiny, Edron Troll Cave, and in Ab'Dendriel. Also found in Rookgaard.",
+	Locations = "Orc Fortress, Folda Dungeon, Edron Orc Cave and around it, Ancient Temple, \z
+		Venore Orc Cave, below the Point of No Return in Outlaw Camp, Plains of Havoc, \z
+		North of Thais in the Orc Peninsula, Elvenbane and Orc Camp in Foreigner Quarter. \z
+		Also found in Rookgaard West plains, Zao Orc Land.",
 }
 
-monster.health = 50
-monster.maxHealth = 50
+monster.health = 105
+monster.maxHealth = 105
 monster.race = "blood"
-monster.corpse = 5960
-monster.speed = 63
-monster.manaCost = 290
+monster.corpse = 5996
+monster.speed = 88
+monster.manaCost = 310
 
 monster.changeTarget = {
 	interval = 4000,
-	chance = 0,
+	chance = 10,
 }
 
 monster.strategiesTarget = {
@@ -54,8 +56,8 @@ monster.flags = {
 	canPushItems = false,
 	canPushCreatures = false,
 	staticAttackChance = 90,
-	targetDistance = 1,
-	runHealth = 15,
+	targetDistance = 4,
+	runHealth = 10,
 	healthHidden = false,
 	isBlockable = false,
 	canWalkOnEnergy = false,
@@ -71,36 +73,30 @@ monster.light = {
 monster.voices = {
 	interval = 5000,
 	chance = 10,
-	{ text = "Hmmm, bugs", yell = false },
-	{ text = "Hmmm, dogs", yell = false },
-	{ text = "Grrr", yell = false },
-	{ text = "Groar", yell = false },
-	{ text = "Gruntz!", yell = false },
+	{ text = "Ugaar!", yell = false },
 }
 
 monster.loot = {
-	{ id = 3003, chance = 7950 }, -- rope
-	{ name = "gold coin", chance = 65300, maxCount = 12 },
-	{ name = "silver amulet", chance = 80 },
-	{ name = "hand axe", chance = 18000 },
-	{ name = "spear", chance = 13000 },
-	{ name = "studded club", chance = 5000 },
-	{ name = "leather helmet", chance = 12000 },
-	{ id = 3412, chance = 4730 }, -- wooden shield
-	{ name = "leather boots", chance = 10000 },
-	{ name = "meat", chance = 15000 },
-	{ name = "bunch of troll hair", chance = 1000 },
+	{ name = "gold coin", chance = 25050, maxCount = 11 },
+	{ name = "spear", chance = 17440 },
+	{ name = "machete", chance = 3000 },
+	{ name = "studded legs", chance = 10000 },
+	{ name = "studded helmet", chance = 9000 },
+	{ name = "meat", chance = 30200 },
+	{ name = "orc tooth", chance = 150 },
+	{ name = "orc leather", chance = 2300 },
 	{ id = 23986, chance = 1000 }, -- heavy old tome
 }
 
 monster.attacks = {
-	{ name = "melee", interval = 2000, chance = 100, minDamage = 0, maxDamage = -15 },
+	{ name = "melee", interval = 2000, chance = 100, minDamage = 0, maxDamage = -25 },
+	{ name = "combat", interval = 2000, chance = 20, type = COMBAT_PHYSICALDAMAGE, minDamage = 0, maxDamage = -30, range = 7, shootEffect = CONST_ANI_SPEAR, target = false },
 }
 
 monster.defenses = {
 	defense = 10,
 	armor = 6,
-	mitigation = 0.20,
+	mitigation = 0.30,
 }
 
 monster.elements = {
@@ -112,7 +108,7 @@ monster.elements = {
 	{ type = COMBAT_MANADRAIN, percent = 0 },
 	{ type = COMBAT_DROWNDAMAGE, percent = 0 },
 	{ type = COMBAT_ICEDAMAGE, percent = 0 },
-	{ type = COMBAT_HOLYDAMAGE, percent = 10 },
+	{ type = COMBAT_HOLYDAMAGE, percent = 20 },
 	{ type = COMBAT_DEATHDAMAGE, percent = -10 },
 }
 

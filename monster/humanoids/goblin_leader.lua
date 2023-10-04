@@ -1,10 +1,10 @@
-local mType = Game.createMonsterType("Island Troll")
+local mType = Game.createMonsterType("Goblin Leader")
 local monster = {}
 
-monster.description = "an island troll"
-monster.experience = 20
+monster.description = "a goblin leader"
+monster.experience = 75
 monster.outfit = {
-	lookType = 282,
+	lookType = 61,
 	lookHead = 0,
 	lookBody = 0,
 	lookLegs = 0,
@@ -13,29 +13,29 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 277
+monster.raceId = 377
 monster.Bestiary = {
 	class = "Humanoid",
 	race = BESTY_RACE_HUMANOID,
-	toKill = 250,
-	FirstUnlock = 10,
-	SecondUnlock = 100,
-	CharmsPoints = 5,
-	Stars = 1,
-	Occurrence = 0,
-	Locations = "Goroma.",
+	toKill = 5,
+	FirstUnlock = 2,
+	SecondUnlock = 3,
+	CharmsPoints = 30,
+	Stars = 2,
+	Occurrence = 3,
+	Locations = "Way to Beregar, below Femor Hills (Tower Defence Quest), near Femor Hills during Goblin raid.",
 }
 
 monster.health = 50
 monster.maxHealth = 50
 monster.race = "blood"
-monster.corpse = 865
-monster.speed = 63
+monster.corpse = 6002
+monster.speed = 60
 monster.manaCost = 290
 
 monster.changeTarget = {
-	interval = 5000,
-	chance = 0,
+	interval = 4000,
+	chance = 10,
 }
 
 monster.strategiesTarget = {
@@ -46,15 +46,15 @@ monster.flags = {
 	summonable = true,
 	attackable = true,
 	hostile = true,
-	convinceable = true,
-	pushable = true,
+	convinceable = false,
+	pushable = false,
 	rewardBoss = false,
 	illusionable = true,
-	canPushItems = false,
+	canPushItems = true,
 	canPushCreatures = false,
 	staticAttackChance = 90,
 	targetDistance = 1,
-	runHealth = 15,
+	runHealth = 10,
 	healthHidden = false,
 	isBlockable = false,
 	canWalkOnEnergy = false,
@@ -70,36 +70,34 @@ monster.light = {
 monster.voices = {
 	interval = 5000,
 	chance = 10,
-	{ text = "Hmmm, turtles", yell = false },
-	{ text = "Hmmm, dogs", yell = false },
-	{ text = "Hmmm, worms", yell = false },
-	{ text = "Groar", yell = false },
-	{ text = "Gruntz!", yell = false },
+	{ text = "Go go, Gobo attack!!", yell = false },
+	{ text = "Me the greenest and the meanest!", yell = false },
+	{ text = "Me have power to crush you!", yell = false },
+	{ text = "Goblinkiller! Catch him !!", yell = false },
 }
 
 monster.loot = {
-	{ id = 3003, chance = 8000 }, -- rope
-	{ name = "gold coin", chance = 60000, maxCount = 10 },
-	{ name = "silver amulet", chance = 70 },
-	{ name = "hand axe", chance = 18000 },
-	{ name = "spear", chance = 20000 },
-	{ name = "studded club", chance = 5000 },
-	{ name = "leather helmet", chance = 10000 },
-	{ id = 3412, chance = 16000 }, -- wooden shield
-	{ name = "leather boots", chance = 10500 },
-	{ name = "mango", chance = 5000 },
-	{ id = 5901, chance = 30000 }, -- wood
-	{ name = "marlin", chance = 40 },
+	{ name = "gold coin", chance = 40000, maxCount = 10 },
+	{ id = 3115, chance = 11500 }, -- bone
+	{ name = "mouldy cheese", chance = 9000 },
+	{ name = "dagger", chance = 10300 },
+	{ name = "short sword", chance = 15400 },
+	{ name = "bone club", chance = 1300 },
+	{ name = "leather helmet", chance = 16670 },
+	{ name = "leather armor", chance = 5000 },
+	{ name = "small axe", chance = 12800 },
+	{ id = 3578, chance = 15000 }, -- fish
 }
 
 monster.attacks = {
-	{ name = "melee", interval = 2000, chance = 100, minDamage = 0, maxDamage = -10 },
+	{ name = "melee", interval = 2000, chance = 100, minDamage = 0, maxDamage = -50 },
+	{ name = "combat", interval = 2000, chance = 15, type = COMBAT_PHYSICALDAMAGE, minDamage = 0, maxDamage = -45, range = 7, shootEffect = CONST_ANI_SMALLSTONE, target = false },
 }
 
 monster.defenses = {
 	defense = 10,
-	armor = 6,
-	mitigation = 0.20,
+	armor = 7,
+	mitigation = 0.33,
 }
 
 monster.elements = {

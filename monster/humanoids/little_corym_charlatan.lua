@@ -1,37 +1,37 @@
-local mType = Game.createMonsterType("Island Troll")
+local mType = Game.createMonsterType("Little Corym Charlatan")
 local monster = {}
 
-monster.description = "an island troll"
-monster.experience = 20
+monster.description = "a little corym charlatan"
+monster.experience = 40
 monster.outfit = {
-	lookType = 282,
+	lookType = 532,
 	lookHead = 0,
-	lookBody = 0,
-	lookLegs = 0,
+	lookBody = 79,
+	lookLegs = 80,
 	lookFeet = 0,
 	lookAddons = 0,
 	lookMount = 0,
 }
 
-monster.raceId = 277
+monster.raceId = 920
 monster.Bestiary = {
 	class = "Humanoid",
 	race = BESTY_RACE_HUMANOID,
-	toKill = 250,
-	FirstUnlock = 10,
-	SecondUnlock = 100,
-	CharmsPoints = 5,
-	Stars = 1,
-	Occurrence = 0,
-	Locations = "Goroma.",
+	toKill = 500,
+	FirstUnlock = 25,
+	SecondUnlock = 250,
+	CharmsPoints = 15,
+	Stars = 2,
+	Occurrence = 1,
+	Locations = "Venore marshes.",
 }
 
-monster.health = 50
-monster.maxHealth = 50
+monster.health = 90
+monster.maxHealth = 90
 monster.race = "blood"
-monster.corpse = 865
-monster.speed = 63
-monster.manaCost = 290
+monster.corpse = 17449
+monster.speed = 85
+monster.manaCost = 0
 
 monster.changeTarget = {
 	interval = 5000,
@@ -39,22 +39,25 @@ monster.changeTarget = {
 }
 
 monster.strategiesTarget = {
-	nearest = 100,
+	nearest = 70,
+	health = 10,
+	damage = 10,
+	random = 10,
 }
 
 monster.flags = {
-	summonable = true,
+	summonable = false,
 	attackable = true,
 	hostile = true,
-	convinceable = true,
-	pushable = true,
+	convinceable = false,
+	pushable = false,
 	rewardBoss = false,
 	illusionable = true,
-	canPushItems = false,
-	canPushCreatures = false,
+	canPushItems = true,
+	canPushCreatures = true,
 	staticAttackChance = 90,
 	targetDistance = 1,
-	runHealth = 15,
+	runHealth = 0,
 	healthHidden = false,
 	isBlockable = false,
 	canWalkOnEnergy = false,
@@ -70,27 +73,9 @@ monster.light = {
 monster.voices = {
 	interval = 5000,
 	chance = 10,
-	{ text = "Hmmm, turtles", yell = false },
-	{ text = "Hmmm, dogs", yell = false },
-	{ text = "Hmmm, worms", yell = false },
-	{ text = "Groar", yell = false },
-	{ text = "Gruntz!", yell = false },
 }
 
-monster.loot = {
-	{ id = 3003, chance = 8000 }, -- rope
-	{ name = "gold coin", chance = 60000, maxCount = 10 },
-	{ name = "silver amulet", chance = 70 },
-	{ name = "hand axe", chance = 18000 },
-	{ name = "spear", chance = 20000 },
-	{ name = "studded club", chance = 5000 },
-	{ name = "leather helmet", chance = 10000 },
-	{ id = 3412, chance = 16000 }, -- wooden shield
-	{ name = "leather boots", chance = 10500 },
-	{ name = "mango", chance = 5000 },
-	{ id = 5901, chance = 30000 }, -- wood
-	{ name = "marlin", chance = 40 },
-}
+monster.loot = {}
 
 monster.attacks = {
 	{ name = "melee", interval = 2000, chance = 100, minDamage = 0, maxDamage = -10 },
@@ -98,8 +83,8 @@ monster.attacks = {
 
 monster.defenses = {
 	defense = 10,
-	armor = 6,
-	mitigation = 0.20,
+	armor = 3,
+	mitigation = 0.23,
 }
 
 monster.elements = {
@@ -116,7 +101,7 @@ monster.elements = {
 }
 
 monster.immunities = {
-	{ type = "paralyze", condition = false },
+	{ type = "paralyze", condition = true },
 	{ type = "outfit", condition = false },
 	{ type = "invisible", condition = false },
 	{ type = "bleed", condition = false },
