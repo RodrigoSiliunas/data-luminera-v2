@@ -1,10 +1,10 @@
-local mType = Game.createMonsterType("Cave Rat")
+local mType = Game.createMonsterType("Insect Swarm")
 local monster = {}
 
-monster.description = "a cave rat"
-monster.experience = 10
+monster.description = "an insect swarm"
+monster.experience = 40
 monster.outfit = {
-	lookType = 56,
+	lookType = 349,
 	lookHead = 0,
 	lookBody = 0,
 	lookLegs = 0,
@@ -13,30 +13,29 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 56
+monster.raceId = 621
 monster.Bestiary = {
-	class = "Mammal",
-	race = BESTY_RACE_MAMMAL,
-	toKill = 250,
-	FirstUnlock = 10,
-	SecondUnlock = 100,
-	CharmsPoints = 5,
-	Stars = 1,
+	class = "Vermin",
+	race = BESTY_RACE_VERMIN,
+	toKill = 500,
+	FirstUnlock = 25,
+	SecondUnlock = 250,
+	CharmsPoints = 15,
+	Stars = 2,
 	Occurrence = 0,
-	Locations = "Almost everywhere in tibia, they seem to have a nest-like place in Greenshore, \z
-		a semi-large spawn at the entrance to the Port Hope troll cave and in cave near Ankrahmun ship. \z
-		Also appears in Rat Plague in Thais and Rat Plague in Rookgaard.",
+	Locations = "Zao Steppe, Northern Zao Plantations and the Horestis Tomb \z
+		(only when the curse of Horestis is not active).",
 }
 
-monster.health = 30
-monster.maxHealth = 30
-monster.race = "blood"
-monster.corpse = 5964
-monster.speed = 75
-monster.manaCost = 250
+monster.health = 50
+monster.maxHealth = 50
+monster.race = "undead"
+monster.corpse = 10403
+monster.speed = 118
+monster.manaCost = 0
 
 monster.changeTarget = {
-	interval = 4000,
+	interval = 5000,
 	chance = 0,
 }
 
@@ -45,18 +44,18 @@ monster.strategiesTarget = {
 }
 
 monster.flags = {
-	summonable = true,
+	summonable = false,
 	attackable = true,
 	hostile = true,
-	convinceable = true,
-	pushable = true,
+	convinceable = false,
+	pushable = false,
 	rewardBoss = false,
-	illusionable = true,
-	canPushItems = false,
+	illusionable = false,
+	canPushItems = true,
 	canPushCreatures = false,
 	staticAttackChance = 90,
 	targetDistance = 1,
-	runHealth = 3,
+	runHealth = 0,
 	healthHidden = false,
 	isBlockable = false,
 	canWalkOnEnergy = false,
@@ -72,31 +71,24 @@ monster.light = {
 monster.voices = {
 	interval = 5000,
 	chance = 10,
-	{ text = "Meep!", yell = false },
-	{ text = "Meeeeep!", yell = false },
 }
 
-monster.loot = {
-	{ name = "gold coin", chance = 85000, maxCount = 2 },
-	{ name = "cookie", chance = 750 },
-	{ id = 3607, chance = 30000 }, -- cheese
-	{ name = "worm", chance = 9700, maxCount = 2 },
-}
+monster.loot = {}
 
 monster.attacks = {
-	{ name = "melee", interval = 2000, chance = 100, minDamage = 0, maxDamage = -10 },
+	{ name = "melee", interval = 2000, chance = 100, minDamage = 0, maxDamage = -10, condition = { type = CONDITION_POISON, totalDamage = 16, interval = 4000 } },
+	{ name = "combat", interval = 2000, chance = 15, type = COMBAT_LIFEDRAIN, minDamage = 0, maxDamage = -15, range = 1, effect = CONST_ME_MAGIC_RED, target = false },
 }
 
 monster.defenses = {
 	defense = 5,
-	armor = 1,
-	mitigation = 0.10,
+	armor = 5,
 }
 
 monster.elements = {
 	{ type = COMBAT_PHYSICALDAMAGE, percent = 0 },
 	{ type = COMBAT_ENERGYDAMAGE, percent = 0 },
-	{ type = COMBAT_EARTHDAMAGE, percent = 0 },
+	{ type = COMBAT_EARTHDAMAGE, percent = 100 },
 	{ type = COMBAT_FIREDAMAGE, percent = -10 },
 	{ type = COMBAT_LIFEDRAIN, percent = 0 },
 	{ type = COMBAT_MANADRAIN, percent = 0 },

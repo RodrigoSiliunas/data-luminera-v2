@@ -1,10 +1,10 @@
-local mType = Game.createMonsterType("Bat")
+local mType = Game.createMonsterType("Larva")
 local monster = {}
 
-monster.description = "a bat"
-monster.experience = 10
+monster.description = "a larva"
+monster.experience = 44
 monster.outfit = {
-	lookType = 122,
+	lookType = 82,
 	lookHead = 0,
 	lookBody = 0,
 	lookLegs = 0,
@@ -13,29 +13,28 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 122
+monster.raceId = 82
 monster.Bestiary = {
-	class = "Mammal",
-	race = BESTY_RACE_MAMMAL,
-	toKill = 250,
-	FirstUnlock = 10,
-	SecondUnlock = 100,
-	CharmsPoints = 5,
-	Stars = 1,
+	class = "Vermin",
+	race = BESTY_RACE_VERMIN,
+	toKill = 500,
+	FirstUnlock = 25,
+	SecondUnlock = 250,
+	CharmsPoints = 15,
+	Stars = 2,
 	Occurrence = 0,
-	Locations = "Dark Cathedral, Tiquanda, Drefia, Mount Sternum, Folda, Ghostlands, Kazordoon, \z
-		Femor Hills, Thais Bat Dungeon, Thais Bandit Cave and in many other caves.",
+	Locations = "Larva Caves, Ankrahmun Tombs, Lions Rock, Gardens of Night (unreachable)",
 }
 
-monster.health = 30
-monster.maxHealth = 30
-monster.race = "blood"
-monster.corpse = 6053
-monster.speed = 100
-monster.manaCost = 250
+monster.health = 70
+monster.maxHealth = 70
+monster.race = "venom"
+monster.corpse = 6023
+monster.speed = 62
+monster.manaCost = 355
 
 monster.changeTarget = {
-	interval = 4000,
+	interval = 5000,
 	chance = 0,
 }
 
@@ -47,7 +46,7 @@ monster.flags = {
 	summonable = true,
 	attackable = true,
 	hostile = true,
-	convinceable = true,
+	convinceable = false,
 	pushable = true,
 	rewardBoss = false,
 	illusionable = true,
@@ -55,12 +54,12 @@ monster.flags = {
 	canPushCreatures = false,
 	staticAttackChance = 90,
 	targetDistance = 1,
-	runHealth = 3,
+	runHealth = 0,
 	healthHidden = false,
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = false,
+	canWalkOnPoison = true,
 }
 
 monster.light = {
@@ -71,38 +70,38 @@ monster.light = {
 monster.voices = {
 	interval = 5000,
 	chance = 10,
-	{ text = "Flap! Flap!", yell = false },
 }
 
 monster.loot = {
-	{ name = "bat wing", chance = 1220 },
+	{ name = "gold coin", chance = 63000, maxCount = 15 },
+	{ name = "meat", chance = 14666 },
 }
 
 monster.attacks = {
-	{ name = "melee", interval = 2000, chance = 100, minDamage = 0, maxDamage = -8 },
+	{ name = "melee", interval = 2000, chance = 100, minDamage = 0, maxDamage = -35, condition = { type = CONDITION_POISON, totalDamage = 15, interval = 4000 } },
 }
 
 monster.defenses = {
-	defense = 5,
-	armor = 1,
-	mitigation = 0.15,
+	defense = 10,
+	armor = 5,
+	mitigation = 0.28,
 }
 
 monster.elements = {
 	{ type = COMBAT_PHYSICALDAMAGE, percent = 0 },
-	{ type = COMBAT_ENERGYDAMAGE, percent = 0 },
-	{ type = COMBAT_EARTHDAMAGE, percent = -10 },
-	{ type = COMBAT_FIREDAMAGE, percent = 0 },
+	{ type = COMBAT_ENERGYDAMAGE, percent = 10 },
+	{ type = COMBAT_EARTHDAMAGE, percent = 100 },
+	{ type = COMBAT_FIREDAMAGE, percent = -10 },
 	{ type = COMBAT_LIFEDRAIN, percent = 0 },
 	{ type = COMBAT_MANADRAIN, percent = 0 },
 	{ type = COMBAT_DROWNDAMAGE, percent = 0 },
-	{ type = COMBAT_ICEDAMAGE, percent = 0 },
+	{ type = COMBAT_ICEDAMAGE, percent = -5 },
 	{ type = COMBAT_HOLYDAMAGE, percent = 0 },
 	{ type = COMBAT_DEATHDAMAGE, percent = 0 },
 }
 
 monster.immunities = {
-	{ type = "paralyze", condition = false },
+	{ type = "paralyze", condition = true },
 	{ type = "outfit", condition = false },
 	{ type = "invisible", condition = false },
 	{ type = "bleed", condition = false },

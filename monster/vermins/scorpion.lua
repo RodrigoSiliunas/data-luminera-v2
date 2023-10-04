@@ -1,10 +1,10 @@
-local mType = Game.createMonsterType("Cave Rat")
+local mType = Game.createMonsterType("Scorpion")
 local monster = {}
 
-monster.description = "a cave rat"
-monster.experience = 10
+monster.description = "a scorpion"
+monster.experience = 45
 monster.outfit = {
-	lookType = 56,
+	lookType = 43,
 	lookHead = 0,
 	lookBody = 0,
 	lookLegs = 0,
@@ -13,42 +13,45 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 56
+monster.raceId = 43
 monster.Bestiary = {
-	class = "Mammal",
-	race = BESTY_RACE_MAMMAL,
-	toKill = 250,
-	FirstUnlock = 10,
-	SecondUnlock = 100,
-	CharmsPoints = 5,
-	Stars = 1,
+	class = "Vermin",
+	race = BESTY_RACE_VERMIN,
+	toKill = 500,
+	FirstUnlock = 25,
+	SecondUnlock = 250,
+	CharmsPoints = 15,
+	Stars = 2,
 	Occurrence = 0,
-	Locations = "Almost everywhere in tibia, they seem to have a nest-like place in Greenshore, \z
-		a semi-large spawn at the entrance to the Port Hope troll cave and in cave near Ankrahmun ship. \z
-		Also appears in Rat Plague in Thais and Rat Plague in Rookgaard.",
+	Locations = "Near Thais Troll Cave, Plague Spike, Drefia, Jakundaf Desert, \z
+		Green Claw Swamp, beneath Folda, Maze of Lost Souls, Plains of Havoc, \z
+		Venore and Ankrahmun Dragon Lairs, beneath Edron Graveyard, Ancient Temple, \z
+		Hellgate, Mad Mage Room, Ankrahmun Tombs, Treasure Island, Mal'ouquah, Ramoa, \z
+		Cyclopolis, Ghostlands, Vengoth, Lion's Rock.",
 }
 
-monster.health = 30
-monster.maxHealth = 30
-monster.race = "blood"
-monster.corpse = 5964
+monster.health = 45
+monster.maxHealth = 45
+monster.race = "venom"
+monster.corpse = 5988
 monster.speed = 75
-monster.manaCost = 250
+monster.manaCost = 310
 
 monster.changeTarget = {
 	interval = 4000,
-	chance = 0,
+	chance = 10,
 }
 
 monster.strategiesTarget = {
-	nearest = 100,
+	nearest = 60,
+	random = 40,
 }
 
 monster.flags = {
 	summonable = true,
 	attackable = true,
 	hostile = true,
-	convinceable = true,
+	convinceable = false,
 	pushable = true,
 	rewardBoss = false,
 	illusionable = true,
@@ -56,12 +59,12 @@ monster.flags = {
 	canPushCreatures = false,
 	staticAttackChance = 90,
 	targetDistance = 1,
-	runHealth = 3,
+	runHealth = 5,
 	healthHidden = false,
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = false,
+	canWalkOnPoison = true,
 }
 
 monster.light = {
@@ -72,36 +75,31 @@ monster.light = {
 monster.voices = {
 	interval = 5000,
 	chance = 10,
-	{ text = "Meep!", yell = false },
-	{ text = "Meeeeep!", yell = false },
 }
 
 monster.loot = {
-	{ name = "gold coin", chance = 85000, maxCount = 2 },
-	{ name = "cookie", chance = 750 },
-	{ id = 3607, chance = 30000 }, -- cheese
-	{ name = "worm", chance = 9700, maxCount = 2 },
+	{ name = "scorpion tail", chance = 4930 },
 }
 
 monster.attacks = {
-	{ name = "melee", interval = 2000, chance = 100, minDamage = 0, maxDamage = -10 },
+	{ name = "melee", interval = 2000, chance = 100, minDamage = 0, maxDamage = -50, condition = { type = CONDITION_POISON, totalDamage = 340, interval = 4000 } },
 }
 
 monster.defenses = {
 	defense = 5,
-	armor = 1,
-	mitigation = 0.10,
+	armor = 14,
+	mitigation = 0.13,
 }
 
 monster.elements = {
 	{ type = COMBAT_PHYSICALDAMAGE, percent = 0 },
-	{ type = COMBAT_ENERGYDAMAGE, percent = 0 },
-	{ type = COMBAT_EARTHDAMAGE, percent = 0 },
+	{ type = COMBAT_ENERGYDAMAGE, percent = 20 },
+	{ type = COMBAT_EARTHDAMAGE, percent = 100 },
 	{ type = COMBAT_FIREDAMAGE, percent = -10 },
 	{ type = COMBAT_LIFEDRAIN, percent = 0 },
 	{ type = COMBAT_MANADRAIN, percent = 0 },
 	{ type = COMBAT_DROWNDAMAGE, percent = 0 },
-	{ type = COMBAT_ICEDAMAGE, percent = 0 },
+	{ type = COMBAT_ICEDAMAGE, percent = -10 },
 	{ type = COMBAT_HOLYDAMAGE, percent = 0 },
 	{ type = COMBAT_DEATHDAMAGE, percent = 0 },
 }

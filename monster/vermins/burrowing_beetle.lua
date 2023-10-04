@@ -1,10 +1,10 @@
-local mType = Game.createMonsterType("Bat")
+local mType = Game.createMonsterType("Burrowing Beetle")
 local monster = {}
 
-monster.description = "a bat"
-monster.experience = 10
+monster.description = "a burrowing beetle"
+monster.experience = 165
 monster.outfit = {
-	lookType = 122,
+	lookType = 83,
 	lookHead = 0,
 	lookBody = 0,
 	lookLegs = 0,
@@ -13,26 +13,12 @@ monster.outfit = {
 	lookMount = 0,
 }
 
-monster.raceId = 122
-monster.Bestiary = {
-	class = "Mammal",
-	race = BESTY_RACE_MAMMAL,
-	toKill = 250,
-	FirstUnlock = 10,
-	SecondUnlock = 100,
-	CharmsPoints = 5,
-	Stars = 1,
-	Occurrence = 0,
-	Locations = "Dark Cathedral, Tiquanda, Drefia, Mount Sternum, Folda, Ghostlands, Kazordoon, \z
-		Femor Hills, Thais Bat Dungeon, Thais Bandit Cave and in many other caves.",
-}
-
-monster.health = 30
-monster.maxHealth = 30
-monster.race = "blood"
-monster.corpse = 6053
-monster.speed = 100
-monster.manaCost = 250
+monster.health = 450
+monster.maxHealth = 450
+monster.race = "venom"
+monster.corpse = 6024
+monster.speed = 85
+monster.manaCost = 0
 
 monster.changeTarget = {
 	interval = 4000,
@@ -44,23 +30,23 @@ monster.strategiesTarget = {
 }
 
 monster.flags = {
-	summonable = true,
+	summonable = false,
 	attackable = true,
 	hostile = true,
-	convinceable = true,
-	pushable = true,
+	convinceable = false,
+	pushable = false,
 	rewardBoss = false,
-	illusionable = true,
-	canPushItems = false,
-	canPushCreatures = false,
+	illusionable = false,
+	canPushItems = true,
+	canPushCreatures = true,
 	staticAttackChance = 90,
 	targetDistance = 1,
-	runHealth = 3,
+	runHealth = 80,
 	healthHidden = false,
 	isBlockable = false,
-	canWalkOnEnergy = false,
-	canWalkOnFire = false,
-	canWalkOnPoison = false,
+	canWalkOnEnergy = true,
+	canWalkOnFire = true,
+	canWalkOnPoison = true,
 }
 
 monster.light = {
@@ -71,27 +57,27 @@ monster.light = {
 monster.voices = {
 	interval = 5000,
 	chance = 10,
-	{ text = "Flap! Flap!", yell = false },
 }
 
-monster.loot = {
-	{ name = "bat wing", chance = 1220 },
-}
+monster.loot = {}
 
 monster.attacks = {
-	{ name = "melee", interval = 2000, chance = 100, minDamage = 0, maxDamage = -8 },
+	{ name = "melee", interval = 2000, chance = 100, minDamage = 0, maxDamage = -95 },
+	{ name = "combat", interval = 2000, chance = 10, type = COMBAT_EARTHDAMAGE, minDamage = 0, maxDamage = -45, range = 1, shootEffect = CONST_ANI_POISON, target = false },
+	{ name = "poisonfield", interval = 2000, chance = 10, radius = 1, target = false },
 }
 
 monster.defenses = {
-	defense = 5,
-	armor = 1,
-	mitigation = 0.15,
+	defense = 15,
+	armor = 15,
+	--	mitigation = ???,
+	{ name = "speed", interval = 2000, chance = 15, speedChange = 200, effect = CONST_ME_MAGIC_RED, target = false, duration = 5000 },
 }
 
 monster.elements = {
 	{ type = COMBAT_PHYSICALDAMAGE, percent = 0 },
 	{ type = COMBAT_ENERGYDAMAGE, percent = 0 },
-	{ type = COMBAT_EARTHDAMAGE, percent = -10 },
+	{ type = COMBAT_EARTHDAMAGE, percent = 0 },
 	{ type = COMBAT_FIREDAMAGE, percent = 0 },
 	{ type = COMBAT_LIFEDRAIN, percent = 0 },
 	{ type = COMBAT_MANADRAIN, percent = 0 },
