@@ -1,29 +1,35 @@
 <?xml version="1.0"?>
 <houses>
-    <house name="Luminous Red Hall #1" houseid="229" entryx="1372" entryy="1172" entryz="7" rent="10000000" guildhall="true" townid="1" size="874" />
-    <house name="Next Three House #1" houseid="230" entryx="1379" entryy="1155" entryz="7" rent="100000" townid="1" size="102" />
-    <house name="Lux Street #1" houseid="231" entryx="1392" entryy="1104" entryz="7" rent="0" townid="1" size="57" />
-    <house name="Lux Street #2" houseid="232" entryx="1403" entryy="1104" entryz="7" rent="0" townid="1" size="77" />
-    <house name="Lux Street #3" houseid="234" entryx="1408" entryy="1105" entryz="7" rent="0" townid="1" size="22" />
-    <house name="Lux Street #4" houseid="235" entryx="1413" entryy="1104" entryz="7" rent="0" townid="1" size="55" />
-    <house name="Lux Street #5" houseid="236" entryx="1416" entryy="1092" entryz="7" rent="0" townid="1" size="44" />
-    <house name="Lux Street #6" houseid="237" entryx="1407" entryy="1095" entryz="6" rent="0" townid="1" size="18" />
-    <house name="Light Square #1" houseid="238" entryx="1383" entryy="1092" entryz="7" rent="0" townid="1" size="54" />
-    <house name="Light Square #2" houseid="239" entryx="1378" entryy="1093" entryz="7" rent="0" townid="1" size="39" />
-    <house name="Light Square #3" houseid="241" entryx="1380" entryy="1090" entryz="7" rent="0" townid="1" size="24" />
-    <house name="Light Square #4" houseid="240" entryx="1385" entryy="1093" entryz="6" rent="0" townid="1" size="64" />
-    <house name="Light Square #5" houseid="242" entryx="1348" entryy="1083" entryz="7" rent="0" townid="1" size="66" />
-    <house name="Light Square #6" houseid="243" entryx="1347" entryy="1077" entryz="7" rent="0" townid="1" size="38" />
-    <house name="Light Square #7" houseid="244" entryx="1350" entryy="1066" entryz="7" rent="0" townid="1" size="44" />
+	<house name="" houseid="14" entryx="0" entryy="0" entryz="0" rent="0" townid="0" size="0" />
+	<house name="" houseid="217" entryx="0" entryy="0" entryz="0" rent="0" townid="0" size="2" />
+	<house name="" houseid="219" entryx="0" entryy="0" entryz="0" rent="0" townid="0" size="0" />
+	<house name="" houseid="221" entryx="0" entryy="0" entryz="0" rent="0" townid="0" size="0" />
+	<house name="" houseid="222" entryx="0" entryy="0" entryz="0" rent="0" townid="0" size="0" />
+	<house name="" houseid="226" entryx="0" entryy="0" entryz="0" rent="0" townid="0" size="0" />
+	<house name="Luminous Red Hall #1" houseid="229" entryx="1372" entryy="1172" entryz="7" rent="10000000" guildhall="true" townid="1" size="874" />
+	<house name="Next Three House #1" houseid="230" entryx="1379" entryy="1155" entryz="7" rent="100000" townid="1" size="102" />
+	<house name="Lux Street #1" houseid="231" entryx="1392" entryy="1104" entryz="7" rent="0" townid="1" size="57" />
+	<house name="Lux Street #2" houseid="232" entryx="1403" entryy="1104" entryz="7" rent="0" townid="1" size="77" />
+	<house name="Lux Street #3" houseid="234" entryx="1408" entryy="1105" entryz="7" rent="0" townid="1" size="22" />
+	<house name="Lux Street #4" houseid="235" entryx="1413" entryy="1104" entryz="7" rent="0" townid="1" size="55" />
+	<house name="Lux Street #5" houseid="236" entryx="1416" entryy="1092" entryz="7" rent="0" townid="1" size="44" />
+	<house name="Lux Street #6" houseid="237" entryx="1407" entryy="1095" entryz="6" rent="0" townid="1" size="18" />
+	<house name="Light Square #1" houseid="238" entryx="1383" entryy="1092" entryz="7" rent="0" townid="1" size="54" />
+	<house name="Light Square #2" houseid="239" entryx="1378" entryy="1093" entryz="7" rent="0" townid="1" size="39" />
+	<house name="Light Square #4" houseid="240" entryx="1385" entryy="1093" entryz="6" rent="0" townid="1" size="64" />
+	<house name="Light Square #3" houseid="241" entryx="1380" entryy="1090" entryz="7" rent="0" townid="1" size="24" />
+	<house name="Light Square #5" houseid="242" entryx="1348" entryy="1083" entryz="7" rent="0" townid="1" size="66" />
+	<house name="Light Square #6" houseid="243" entryx="1347" entryy="1077" entryz="7" rent="0" townid="1" size="38" />
+	<house name="Light Square #7" houseid="244" entryx="1350" entryy="1066" entryz="7" rent="0" townid="1" size="44" />
 	<house name="Fisherman's Street #1" houseid="245" entryx="1417" entryy="1064" entryz="7" rent="0" townid="1" size="33" />
-	<house name="Fisherman's Street #2" houseid="246" entryx="1421" entryy="1064" entryz="7" rent="0" townid="1" size="15" />
-	<house name="Fisherman's Street #3" houseid="247" entryx="1419" entryy="1058" entryz="7" rent="0" townid="1" size="30" />
-	<house name="Fisherman's Street #4" houseid="248" entryx="1414" entryy="1054" entryz="7" rent="0" townid="1" size="52" />
-	<house name="Fisherman's Street #5" houseid="249" entryx="1406" entryy="1055" entryz="7" rent="0" townid="1" size="14" />
-	<house name="Fisherman's Street #6" houseid="250" entryx="1405" entryy="1054" entryz="7" rent="0" townid="1" size="15" />
-	<house name="Fisherman's Street #7" houseid="251" entryx="1414" entryy="1052" entryz="6" rent="0" townid="1" size="20" />
-	<house name="Fisherman's Street #8" houseid="252" entryx="1442" entryy="1059" entryz="6" rent="0" townid="1" size="13" />
-	<house name="Fisherman's Street #9" houseid="253" entryx="1442" entryy="1062" entryz="6" rent="0" townid="1" size="12" />
+	<house name="Fisherman's Street #2" houseid="246" entryx="1421" entryy="1064" entryz="7" rent="0" townid="1" size="16" />
+	<house name="Fisherman's Street #3" houseid="247" entryx="1419" entryy="1058" entryz="7" rent="0" townid="1" size="32" />
+	<house name="Fisherman's Street #4" houseid="248" entryx="1414" entryy="1054" entryz="7" rent="0" townid="1" size="51" />
+	<house name="Fisherman's Street #5" houseid="249" entryx="1406" entryy="1055" entryz="7" rent="0" townid="1" size="15" />
+	<house name="Fisherman's Street #6" houseid="250" entryx="1405" entryy="1054" entryz="7" rent="0" townid="1" size="16" />
+	<house name="Fisherman's Street #7" houseid="251" entryx="1414" entryy="1052" entryz="6" rent="0" townid="1" size="21" />
+	<house name="Fisherman's Street #8" houseid="252" entryx="1442" entryy="1059" entryz="6" rent="0" townid="1" size="14" />
+	<house name="Fisherman's Street #9" houseid="253" entryx="1442" entryy="1062" entryz="6" rent="0" townid="1" size="14" />
 	<house name="Lumen Street #1" houseid="254" entryx="1086" entryy="1075" entryz="7" rent="0" townid="1" size="22" />
 	<house name="Lumen Street #2" houseid="255" entryx="1390" entryy="1073" entryz="7" rent="0" townid="1" size="60" />
 	<house name="Lumen Street #3" houseid="256" entryx="1394" entryy="1073" entryz="7" rent="0" townid="1" size="26" />

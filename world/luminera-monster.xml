@@ -6288,7 +6288,6 @@
 	<monster centerx="1415" centery="966" centerz="7" radius="1">
 		<monster name="Snake" x="0" y="0" z="7" spawntime="60" />
 	</monster>
-	<monster centerx="1610" centery="966" centerz="7" radius="1" />
 	<monster centerx="1625" centery="966" centerz="7" radius="1">
 		<monster name="Spider" x="0" y="0" z="7" spawntime="60" />
 	</monster>
@@ -7176,6 +7175,7 @@
 	</monster>
 	<monster centerx="1317" centery="1001" centerz="7" radius="1">
 		<monster name="Giant Spider" x="0" y="0" z="7" spawntime="60" />
+		<monster name="Tarantula" x="-1" y="1" z="7" spawntime="60" />
 	</monster>
 	<monster centerx="1323" centery="1001" centerz="7" radius="1">
 		<monster name="Tarantula" x="0" y="0" z="7" spawntime="60" />
@@ -7201,7 +7201,7 @@
 	<monster centerx="1613" centery="1001" centerz="7" radius="1">
 		<monster name="Deer" x="0" y="0" z="7" spawntime="60" />
 	</monster>
-	<monster centerx="1313" centery="1002" centerz="7" radius="1">
+	<monster centerx="1312" centery="1002" centerz="7" radius="1">
 		<monster name="Spider" x="0" y="0" z="7" spawntime="60" />
 	</monster>
 	<monster centerx="1475" centery="1002" centerz="7" radius="1">
@@ -7258,6 +7258,9 @@
 	<monster centerx="1296" centery="1004" centerz="7" radius="1">
 		<monster name="Zombie" x="0" y="0" z="7" spawntime="60" />
 	</monster>
+	<monster centerx="1318" centery="1004" centerz="7" radius="1">
+		<monster name="Poison Spider" x="0" y="0" z="7" spawntime="60" />
+	</monster>
 	<monster centerx="1333" centery="1004" centerz="7" radius="3" />
 	<monster centerx="1427" centery="1004" centerz="7" radius="1">
 		<monster name="Barbarian Headsplitter" x="0" y="0" z="7" spawntime="60" />
@@ -7285,12 +7288,6 @@
 	</monster>
 	<monster centerx="1266" centery="1005" centerz="7" radius="1">
 		<monster name="Zombie" x="0" y="0" z="7" spawntime="60" />
-	</monster>
-	<monster centerx="1314" centery="1005" centerz="7" radius="1">
-		<monster name="Tarantula" x="0" y="0" z="7" spawntime="60" />
-	</monster>
-	<monster centerx="1319" centery="1005" centerz="7" radius="1">
-		<monster name="Poison Spider" x="0" y="0" z="7" spawntime="60" />
 	</monster>
 	<monster centerx="1325" centery="1005" centerz="7" radius="1">
 		<monster name="Spider" x="0" y="1" z="7" spawntime="60" />
@@ -8025,7 +8022,6 @@
 		<monster name="Orc Cult Priest" x="0" y="0" z="7" spawntime="5" />
 		<monster name="Orc Cultist" x="1" y="0" z="7" spawntime="5" />
 	</monster>
-	<monster centerx="1735" centery="1038" centerz="7" radius="1" />
 	<monster centerx="1761" centery="1038" centerz="7" radius="1">
 		<monster name="Orc Cult Minion" x="0" y="0" z="7" spawntime="5" />
 	</monster>
@@ -9204,7 +9200,6 @@
 	<monster centerx="1667" centery="1091" centerz="7" radius="1">
 		<monster name="Orclops Ravager" x="0" y="0" z="7" spawntime="15" />
 	</monster>
-	<monster centerx="1343" centery="1092" centerz="7" radius="1" />
 	<monster centerx="1448" centery="1092" centerz="7" radius="1">
 		<monster name="Snake" x="0" y="0" z="7" spawntime="60" />
 	</monster>
@@ -16225,7 +16220,7 @@
 	<monster centerx="1275" centery="933" centerz="9" radius="1">
 		<monster name="Hero" x="0" y="0" z="9" spawntime="30" />
 	</monster>
-	<monster centerx="1282" centery="934" centerz="9" radius="1">
+	<monster centerx="1281" centery="933" centerz="9" radius="1">
 		<monster name="Hero" x="0" y="0" z="9" spawntime="30" />
 	</monster>
 	<monster centerx="1194" centery="935" centerz="9" radius="1">
