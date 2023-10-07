@@ -7132,6 +7132,9 @@
 	<monster centerx="1309" centery="1000" centerz="7" radius="1">
 		<monster name="Tarantula" x="0" y="0" z="7" spawntime="60" />
 	</monster>
+	<monster centerx="1328" centery="1000" centerz="7" radius="1">
+		<monster name="Spider" x="0" y="0" z="7" spawntime="60" />
+	</monster>
 	<monster centerx="1365" centery="1000" centerz="7" radius="1">
 		<monster name="Spider" x="0" y="0" z="7" spawntime="10" />
 		<monster name="Poison Spider" x="1" y="1" z="7" spawntime="10" />
@@ -7180,7 +7183,7 @@
 	<monster centerx="1323" centery="1001" centerz="7" radius="1">
 		<monster name="Tarantula" x="0" y="0" z="7" spawntime="60" />
 	</monster>
-	<monster centerx="1328" centery="1001" centerz="7" radius="1">
+	<monster centerx="1333" centery="1001" centerz="7" radius="1">
 		<monster name="Spider" x="0" y="0" z="7" spawntime="60" />
 	</monster>
 	<monster centerx="1356" centery="1001" centerz="7" radius="1">
@@ -7261,7 +7264,6 @@
 	<monster centerx="1318" centery="1004" centerz="7" radius="1">
 		<monster name="Poison Spider" x="0" y="0" z="7" spawntime="60" />
 	</monster>
-	<monster centerx="1333" centery="1004" centerz="7" radius="3" />
 	<monster centerx="1427" centery="1004" centerz="7" radius="1">
 		<monster name="Barbarian Headsplitter" x="0" y="0" z="7" spawntime="60" />
 	</monster>
@@ -7292,7 +7294,7 @@
 	<monster centerx="1325" centery="1005" centerz="7" radius="1">
 		<monster name="Spider" x="0" y="1" z="7" spawntime="60" />
 	</monster>
-	<monster centerx="1329" centery="1005" centerz="7" radius="1">
+	<monster centerx="1331" centery="1005" centerz="7" radius="1">
 		<monster name="Spider" x="0" y="0" z="7" spawntime="60" />
 	</monster>
 	<monster centerx="1364" centery="1005" centerz="7" radius="1">
@@ -11780,7 +11782,6 @@
 	<monster centerx="1429" centery="874" centerz="8" radius="1">
 		<monster name="Burster Spectre" x="0" y="0" z="8" spawntime="60" />
 	</monster>
-	<monster centerx="1649" centery="875" centerz="8" radius="1" />
 	<monster centerx="1635" centery="876" centerz="8" radius="1">
 		<monster name="Frazzlemaw" x="0" y="0" z="8" spawntime="5" />
 	</monster>
@@ -11949,7 +11950,9 @@
 	<monster centerx="1751" centery="898" centerz="8" radius="1">
 		<monster name="Silencer" x="0" y="0" z="8" spawntime="60" />
 	</monster>
-	<monster centerx="1423" centery="899" centerz="8" radius="1" />
+	<monster centerx="1422" centery="899" centerz="8" radius="1">
+		<monster name="Arachnophobica" x="0" y="-1" z="8" spawntime="60" />
+	</monster>
 	<monster centerx="1719" centery="899" centerz="8" radius="1">
 		<monster name="Frazzlemaw" x="0" y="-1" z="8" spawntime="30" />
 		<monster name="Frazzlemaw" x="0" y="0" z="8" spawntime="60" />
