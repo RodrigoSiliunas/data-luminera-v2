@@ -1,24 +1,24 @@
 <?xml version="1.0"?>
 <npcs>
-	<npc centerx="915" centery="602" centerz="4" radius="1">
-		<npc name="Undal" x="0" y="0" z="4" spawntime="60" />
+	<npc centerx="1350" centery="1111" centerz="6" radius="1">
+		<npc name="Rashid" x="0" y="0" z="6" spawntime="60" />
 	</npc>
-	<npc centerx="676" centery="887" centerz="7" radius="1">
-		<npc name="Taegen" x="0" y="0" z="7" spawntime="60" />
+	<npc centerx="1320" centery="1167" centerz="6" radius="1">
+		<npc name="Yasir" x="0" y="0" z="6" spawntime="60" />
 	</npc>
-	<npc centerx="669" centery="896" centerz="7" radius="1">
-		<npc name="Maelyrra" x="0" y="0" z="7" spawntime="60" />
+	<npc centerx="1378" centery="1082" centerz="7" radius="1">
+		<npc name="Dario" x="0" y="0" z="7" spawntime="60" />
 	</npc>
-	<npc centerx="714" centery="898" centerz="7" radius="1">
-		<npc name="Peaceful Pooka" x="0" y="0" z="7" spawntime="60" />
+	<npc centerx="1380" centery="1075" centerz="7" radius="1">
+		<npc name="Huguinariel" x="0" y="0" z="7" spawntime="60" />
 	</npc>
-	<npc centerx="634" centery="906" centerz="7" radius="1">
-		<npc name="Gerimor" x="0" y="0" z="7" spawntime="60" />
+	<npc centerx="1344" centery="1099" centerz="7" radius="1">
+		<npc name="Alessandra" x="0" y="0" z="7" spawntime="60" />
 	</npc>
-	<npc centerx="606" centery="922" centerz="7" radius="1">
-		<npc name="Aurita" x="0" y="0" z="7" spawntime="60" />
+	<npc centerx="1341" centery="1101" centerz="6" radius="1">
+		<npc name="Tundriel" x="0" y="0" z="6" spawntime="60" />
 	</npc>
-	<npc centerx="640" centery="956" centerz="7" radius="1">
-		<npc name="Dancing Fairy" x="0" y="0" z="7" spawntime="60" />
+	<npc centerx="1373" centery="1052" centerz="7" radius="1">
+		<npc name="Tandriel" x="0" y="0" z="7" spawntime="60" />
 	</npc>
 </npcs>

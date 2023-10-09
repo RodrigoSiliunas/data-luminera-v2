@@ -19379,7 +19379,6 @@
 		<monster name="Wereboar" x="0" y="0" z="11" spawntime="20" />
 	</monster>
 	<monster centerx="1521" centery="660" centerz="11" radius="1">
-		<monster name="Werefox" x="0" y="-1" z="11" spawntime="20" />
 		<monster name="Werewolf" x="0" y="0" z="11" spawntime="20" />
 	</monster>
 	<monster centerx="1532" centery="661" centerz="11" radius="1">
