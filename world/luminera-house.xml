@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <houses>
 	<house name="Luminous Red Hall #1" houseid="229" entryx="1372" entryy="1172" entryz="7" rent="10000000" guildhall="true" townid="1" size="874" />
-	<house name="Next Three House #1" houseid="230" entryx="1379" entryy="1155" entryz="7" rent="100000" townid="1" size="102" />
+	<house name="Next Three House #1" houseid="230" entryx="1379" entryy="1155" entryz="7" rent="100000" townid="1" size="104" />
 	<house name="Lux Street #1" houseid="231" entryx="1392" entryy="1104" entryz="7" rent="0" townid="1" size="57" />
 	<house name="Lux Street #2" houseid="232" entryx="1403" entryy="1104" entryz="7" rent="0" townid="1" size="77" />
 	<house name="Lux Street #3" houseid="234" entryx="1408" entryy="1105" entryz="7" rent="0" townid="1" size="22" />
