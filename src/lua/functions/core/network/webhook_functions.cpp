@@ -13,24 +13,36 @@
 #include "server/network/webhook/webhook.hpp"
 
 int WebhookFunctions::luaWebhookSendMessage(lua_State* L) {
-    // Implementação da função sendMessage
+    // Webhook.sendMessage(title, message, customHeaders, payload)
     std::string title = getString(L, 1);
     std::string message = getString(L, 2);
     std::map<std::string, std::string> customHeaders;
     std::string payload;
 
-    // Mapeamento das strings para os valores de enumeração HttpMethod
-    HttpMethod method = HttpMethod::GET; // Valor padrão
     if (lua_gettop(L) >= 3) {
-        const std::string methodStr = getString(L, 3);
-        if (methodStr == "POST") {
-            method = HttpMethod::POST;
+        // Se um terceiro argumento estiver presente, é um mapa de cabeçalhos personalizados
+        luaL_checktype(L, 3, LUA_TTABLE);
+        lua_pushnil(L);  // Primeira chave da tabela
+        while (lua_next(L, 3) != 0) {
+            // Usa key (índice 4) e value (índice 5) da tabela
+            if (lua_type(L, 4) == LUA_TSTRING && lua_type(L, 5) == LUA_TSTRING) {
+                // Converte as chaves e valores para strings
+                const char* key = lua_tostring(L, 4);
+                const char* value = lua_tostring(L, 5);
+                customHeaders[key] = value;
+            }
+            // Remove o valor, mantendo a chave para a próxima iteração
+            lua_pop(L, 1);
         }
     }
 
+    // Mapeamento das strings para os valores de enumeração HttpMethod
+    HttpMethod method = HttpMethod::POST; // Valor padrão
     if (lua_gettop(L) >= 4) {
-        // Se um quarto argumento estiver presente, é o payload
-        payload = getString(L, 4);
+        const std::string methodStr = getString(L, 4);
+        if (methodStr == "GET") {
+            method = HttpMethod::GET;
+        }
     }
 
     g_webhook().sendMessage(title, message, customHeaders, payload, method);
@@ -44,18 +56,19 @@ int WebhookFunctions::luaWebhookSendGetRequest(lua_State* L) {
     std::string url = getString(L, 1);
     std::map<std::string, std::string> customHeaders;
 
-    std::string response_body;  // Adicione uma variável para armazenar a resposta
+    // Adicione um argumento para armazenar o response_body
+    std::string response_body;
 
     if (lua_gettop(L) >= 2) {
         // Se um segundo argumento estiver presente, é um mapa de cabeçalhos personalizados
         luaL_checktype(L, 2, LUA_TTABLE);
         lua_pushnil(L);  // Primeira chave da tabela
         while (lua_next(L, 2) != 0) {
-            // Usa key (índice 3) e value (índice 4) da tabela
-            if (lua_type(L, 3) == LUA_TSTRING && lua_type(L, 4) == LUA_TSTRING) {
+            // Usa key (índice 4) e value (índice 5) da tabela
+            if (lua_type(L, 4) == LUA_TSTRING && lua_type(L, 5) == LUA_TSTRING) {
                 // Converte as chaves e valores para strings
-                const char* key = lua_tostring(L, 3);
-                const char* value = lua_tostring(L, 4);
+                const char* key = lua_tostring(L, 4);
+                const char* value = lua_tostring(L, 5);
                 customHeaders[key] = value;
             }
             // Remove o valor, mantendo a chave para a próxima iteração
@@ -65,14 +78,16 @@ int WebhookFunctions::luaWebhookSendGetRequest(lua_State* L) {
 
     // Chame a função sendGetRequest da classe Webhook do código C++
     // usando a URL, cabeçalhos personalizados e response_body fornecidos
-    int response_code = g_webhook().sendGetRequest(url, customHeaders, &response_body);
+    const char* urlCStr = url.c_str();
+    int response_code = g_webhook().sendGetRequest(urlCStr, customHeaders, &response_body);
 
-    // Empurre o código de resposta e o response_body para a pilha Lua
+    // Retorne o response_body como segundo valor
     lua_pushinteger(L, response_code);
     lua_pushstring(L, response_body.c_str());
 
-    return 2; // Retorna 2 valores para Lua (código de resposta e response_body)
+    return 2;
 }
+
 
 int WebhookFunctions::luaWebhookSendPostRequest(lua_State* L) {
     // Implementação da função sendPostRequest
@@ -80,7 +95,8 @@ int WebhookFunctions::luaWebhookSendPostRequest(lua_State* L) {
     std::map<std::string, std::string> customHeaders;
     std::string payload = getString(L, 2);
 
-    std::string response_body;  // Adicione uma variável para armazenar a resposta
+    // Adicione um argumento para armazenar o response_body
+    std::string response_body;
 
     if (lua_gettop(L) >= 3) {
         // Se um terceiro argumento estiver presente, é um mapa de cabeçalhos personalizados
@@ -100,12 +116,13 @@ int WebhookFunctions::luaWebhookSendPostRequest(lua_State* L) {
     }
 
     // Chame a função sendPostRequest da classe Webhook do código C++
-    // usando a URL, cabeçalhos personalizados e payload fornecidos
-    int response_code = g_webhook().sendPostRequest(url, customHeaders, payload, &response_body);
+    // usando a URL, cabeçalhos personalizados, payload e response_body fornecidos
+    const char* urlCStr = url.c_str();
+    int response_code = g_webhook().sendPostRequest(urlCStr, customHeaders, payload.c_str(), &response_body);
 
-    // Empurre o código de resposta e a resposta_body para a pilha Lua
+    // Retorne o response_body como segundo valor
     lua_pushinteger(L, response_code);
     lua_pushstring(L, response_body.c_str());
 
-    return 2; // Retorna 2 valores para Lua (código de resposta e response_body)
+    return 2;
 }
