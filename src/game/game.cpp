@@ -7411,8 +7411,6 @@ void Game::dieSafely(std::string errorMsg /* = "" */) {
 }
 
 void Game::shutdown() {
-	g_webhook().sendMessage("Server is shutting down", "Shutting down...", WEBHOOK_COLOR_OFFLINE);
-
 	g_logger().info("Shutting down...");
 	map.spawnsMonster.clear();
 	map.spawnsNpc.clear();

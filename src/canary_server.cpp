@@ -91,8 +91,6 @@ int CanaryServer::run() {
 				g_game().start(&serviceManager);
 				g_game().setGameState(GAME_STATE_NORMAL);
 
-				g_webhook().sendMessage("Server is now online", "Server has successfully started.", WEBHOOK_COLOR_ONLINE);
-
 				loaderDone = true;
 				loaderSignal.notify_all();
 			} catch (FailedToInitializeCanary &err) {

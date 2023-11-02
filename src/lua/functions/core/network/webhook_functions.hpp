@@ -11,13 +11,21 @@
 
 #include "lua/scripts/luascript.hpp"
 
-class WebhookFunctions final : LuaScriptInterface {
+class WebhookFunctions final : LuaScriptInterface
+{
 public:
-	static void init(lua_State* L) {
+	static void init(lua_State *L)
+	{
 		registerTable(L, "Webhook");
 		registerMethod(L, "Webhook", "sendMessage", WebhookFunctions::luaWebhookSendMessage);
+		registerMethod(L, "Webhook", "sendGetRequest", WebhookFunctions::luaWebhookSendGetRequest);
+		registerMethod(L, "Webhook", "sendPostRequest", WebhookFunctions::luaWebhookSendPostRequest);
 	}
 
 private:
-	static int luaWebhookSendMessage(lua_State* L);
+	static int luaWebhookSendMessage(lua_State *L);
+
+	static int luaWebhookSendGetRequest(lua_State *L);
+
+	static int luaWebhookSendPostRequest(lua_State *L);
 };
