@@ -13,9 +13,9 @@
 #include "server/network/webhook/webhook.hpp"
 
 int WebhookFunctions::luaWebhookSendMessage(lua_State* L) {
-    // Webhook.sendMessage(title, message, customHeaders, payload)
-    std::string title = getString(L, 1);
-    std::string message = getString(L, 2);
+    // Webhook.sendMessage(url, method, customHeaders, payload)
+    std::string url = getString(L, 1);
+    HttpMethod method = static_cast<HttpMethod>(luaL_checkinteger(L, 2));
     std::map<std::string, std::string> customHeaders;
     std::string payload;
 
@@ -36,20 +36,18 @@ int WebhookFunctions::luaWebhookSendMessage(lua_State* L) {
         }
     }
 
-    // Mapeamento das strings para os valores de enumeração HttpMethod
-    HttpMethod method = HttpMethod::POST; // Valor padrão
     if (lua_gettop(L) >= 4) {
-        const std::string methodStr = getString(L, 4);
-        if (methodStr == "GET") {
-            method = HttpMethod::GET;
-        }
+        // Se um quarto argumento estiver presente, é o payload
+        payload = getString(L, 4);
     }
 
-    g_webhook().sendMessage(title, message, customHeaders, payload, method);
+    // Chame a função sendMessage da classe Webhook do código C++
+    g_webhook().sendMessage(url, method, customHeaders, payload);
     lua_pushnil(L);
 
     return 1;
 }
+
 
 int WebhookFunctions::luaWebhookSendGetRequest(lua_State* L) {
     // Implementação da função sendGetRequest
