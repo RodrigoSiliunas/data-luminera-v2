@@ -1,7 +1,6 @@
 # Pastas que não pertencem ao data-canary;
 
-/src
-/data
+
 /data-otservbr-global
 /.vscode
 /world/canary
