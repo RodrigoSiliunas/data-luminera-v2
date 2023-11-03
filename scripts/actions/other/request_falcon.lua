@@ -13,11 +13,7 @@ function falcon.onUse(player, item, fromPosition, target, toPosition, isHotkey)
     -- Converte a tabela response_body em uma string
     local response_string = table.concat(response_body)
     
-    print("Requisição Efetuada. Status: " .. response_code .. "\nBody: " .. response_string)
-
-    for key, value in pairs(response_body) do
-        print(key, value)
-    end
+    -- print("Requisição Efetuada. Status: " .. response_code .. "\nBody: " .. response_string)
 
     print(response)
 
