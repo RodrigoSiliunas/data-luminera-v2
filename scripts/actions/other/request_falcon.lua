@@ -1,11 +1,17 @@
-local http = require('socket.http')
 local falcon = Action()
 
 function falcon.onUse(player, item, fromPosition, target, toPosition, isHotkey)
-    local result, status = http.request('http://www.google.com')
+    local customHeaders = {
+        ["Content-Type"] = "application/json"
+    }
+    local apiUrl = "https://pokeapi.co/api/v2/pokemon/pikachu/"
+
+    -- Envia a solicitação GET usando o método sendGetRequest
+    local response_body = {}
+    local response_code = Webhook.sendGetRequest(apiUrl, customHeaders, response_body)
 
     player:getPosition():sendMagicEffect(CONST_ME_SOUND_YELLOW)
-    player:sendTextMessage("You have successfully on send a request to google.com, status:" .. status)
+    player:sendTextMessage("You have successfully on send a request to google.com, status:" .. response_code)
     return true
 end
 
