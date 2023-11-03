@@ -8,7 +8,7 @@ function falcon.onUse(player, item, fromPosition, target, toPosition, isHotkey)
 
     -- Envia a solicitação GET usando o método sendGetRequest
     local response_body = {}
-    local response_code = Webhook.sendGetRequest(apiUrl, customHeaders, response_body)
+    local response_code, response = Webhook.sendGetRequest(apiUrl, customHeaders, response_body)
     
     -- Converte a tabela response_body em uma string
     local response_string = table.concat(response_body)
@@ -18,6 +18,8 @@ function falcon.onUse(player, item, fromPosition, target, toPosition, isHotkey)
     for key, value in pairs(response_body) do
         print(key, value)
     end
+
+    print(response)
 
     player:getPosition():sendMagicEffect(CONST_ME_SOUND_YELLOW)
     return true
