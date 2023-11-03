@@ -130,6 +130,13 @@ void Webhook::sendWebhook() {
 	g_logger().debug("Webhook successfully sent to {}", task->url);
 }
 
+size_t Webhook::writeCallback(void* contents, size_t size, size_t nmemb, void* userp) {
+	size_t real_size = size * nmemb;
+	auto* str = reinterpret_cast<std::string*>(userp);
+	str->append(reinterpret_cast<char*>(contents), real_size);
+	return real_size;
+}
+
 int Webhook::sendGetRequest(const char* url, std::map<std::string, std::string> customHeaders, std::string* response_body) const {
 	return sendRequest(url, HttpMethod::GET, customHeaders, nullptr, response_body);
 }
