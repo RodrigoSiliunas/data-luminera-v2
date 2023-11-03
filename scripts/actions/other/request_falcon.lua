@@ -15,6 +15,10 @@ function falcon.onUse(player, item, fromPosition, target, toPosition, isHotkey)
     
     print("Requisição Efetuada. Status: " .. response_code .. "\nBody: " .. response_string)
 
+    for key, value in pairs(response_body) do
+        print(key, value)
+    end
+
     player:getPosition():sendMagicEffect(CONST_ME_SOUND_YELLOW)
     return true
 end
